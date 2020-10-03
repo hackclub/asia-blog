@@ -1,19 +1,31 @@
 /**@jsx jsx*/
 
-import { Flex, jsx, Text } from 'theme-ui'
-import styled from '@emotion/styled'
-import getProfile from '../../../../lib/author/index'
+import { Flex, jsx, Text, Box } from 'theme-ui'
+import CardTemplate from '../../supplementary/cardtemplate/index'
+import AuthorComp from '../../supplementary/authorcomp/index'
 
-export default ({ index, posterurl, title, author, para, label }) => (
-  <div
+export default ({
+  index,
+  posterurl,
+  title,
+  author,
+  para,
+  labelimgurl,
+  customAfterStyle,
+}) => (
+  <Box
+    as='a'
+    href='#'
     sx={{
-      width: '400px',
+      width: ['350px', '400px'],
       display: 'inline-block',
       ml: index == 0 ? null : [3],
       mr: [3],
       whiteSpace: 'normal',
+      color: 'text',
+      textDecoration: 'none',
     }}>
-    <CustomBox
+    <CardTemplate
       sx={{
         width: '100%',
         height: '300px',
@@ -31,27 +43,29 @@ export default ({ index, posterurl, title, author, para, label }) => (
           bottom: ['-1.5rem'],
           right: ['0rem'],
           transform: 'rotate(15deg)',
-          backgroundImage: `url(img/labels/${label}.png)`,
-        },
-      }}></CustomBox>
-    <h1 sx={{ mb: [0] }}>{title}</h1>
-    <Flex sx={{ alignItems: 'center' }}>
-      <img
-        src={`img/profiles/${getProfile(author)}`}
-        sx={{ borderRadius: [200], width: [40] }}
-      />
-      <Text sx={{ pl: [3], fontSize: [2] }}>-{author}</Text>
-    </Flex>
-    <p sx={{ fontSize: [3] }}>{para}</p>
-  </div>
-)
 
-const CustomBox = styled.div`
-  &:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-`
+          /**The above are some default styles*/
+
+          ...customAfterStyle,
+
+          backgroundImage: `url(${labelimgurl})`,
+        },
+        ':hover': {
+          transform: 'scale(1.01)',
+          transition: '0.1s',
+        },
+      }}></CardTemplate>
+    <h1
+      sx={{
+        mb: [0],
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        ':hover': { textDecorationLine: 'underline' },
+      }}>
+      {title}
+    </h1>
+    <AuthorComp author={author} />
+    <p sx={{ fontSize: [3] }}>{para}</p>
+  </Box>
+)

@@ -1,6 +1,7 @@
 /**@jsx jsx*/
 import { jsx, Box, Text } from 'theme-ui'
 import styled from '@emotion/styled'
+import getLabelData from '../../../../lib/data/labels/index'
 
 export default () => (
   <CustomBox
@@ -21,6 +22,7 @@ export default () => (
         height: ['7rem', '8rem'],
         bottom: ['-4rem'],
         right: ['0rem'],
+        backgroundImage: `url(${getLabelData('hackstore').imgurl})`,
       },
       ':hover': {
         transform: 'scale(1.01)',
@@ -70,6 +72,5 @@ const CustomBox = styled.div`
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url(img/labels/hackstorelogo.png);
   }
 `

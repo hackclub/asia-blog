@@ -9,6 +9,7 @@ export default () => (
       //    height: 700,
       pb: [3, 5],
       pt: [4, 4, 5],
+      bg: 'steel',
       backgroundImage:
         'url(img/hero/man-blogging.png),url(img/patch/orange-patch.png),url(img/patch/red-patch.png),url(img/hero/hero-background.png)',
       backgroundRepeat: 'no-repeat,no-repeat,no-repeat,repeat',

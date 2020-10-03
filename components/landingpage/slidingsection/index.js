@@ -1,34 +1,26 @@
 /***@jsx jsx*/
-
-import { jsx, Flex, Text } from 'theme-ui'
+import { useState } from 'react'
+import { jsx, Grid } from 'theme-ui'
 import Card from './card/index'
-import data from '../../../lib/data/hq/slidesection/index'
+import data from '../../../lib/data/slidesection/hq/index'
+import getLabelData from '../../../lib/data/labels/index'
+import Sectionintro from '../sectionintro/index'
 
 export default () => (
   <div sx={{ pl: [4, 5], pr: [2, 2, 0] }}>
-    <div>
-      <h1
-        sx={{
-          fontSize: [5],
-          borderBottom: '3px solid rgba(48, 48, 48, 0.125)',
-          mr: [5],
-          pb: [2],
-          mb: [0],
-        }}>
-        {' '}
-        Happenings @ HQ!
-      </h1>
-      <Flex sx={{ pt: [3], alignItems: 'center' }}>
-        <img src='img/labels/hackclubdarklogo.png' sx={{ width: [50] }} />
-        <Text sx={{ fontSize: [3], ml: [4] }}>
-          Check out the latest stories and events from HQ.
-        </Text>
-      </Flex>
-    </div>
-    <div
+    <Sectionintro
+      title=' Happenings @ HQ!'
+      className='hqsection'
+      isSlidingSection={true}
+      imgurl='img/labels/hackclubdarklogo.png'
+      para='Check out the latest stories and events from HQ.'
+    />
+    <Grid
+      columns={data.length}
+      className={'hqsection'}
       sx={{
         pt: [4],
-        overflowX: 'scroll',
+        overflowX: 'auto',
         whiteSpace: 'nowrap',
       }}>
       {data.map((data, index) => (
@@ -38,9 +30,10 @@ export default () => (
           title={data.title}
           author={data.author}
           para={data.para}
-          label={data.label}
+          labelimgurl={getLabelData(data.label).imgurl}
+          customAfterStyle={getLabelData(data.label).styles}
         />
       ))}
-    </div>
+    </Grid>
   </div>
 )
