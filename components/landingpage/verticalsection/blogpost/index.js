@@ -3,16 +3,23 @@ import { jsx, Box, Grid, Text, Button } from 'theme-ui'
 import Card from './card/index'
 import AuthorComp from '../../supplementary/authorcomp/index'
 import styled from '@emotion/styled'
-import getLabelData from '../../../../lib/data/labels/index'
 
-export default ({ index, title, author, para, labelurl, labelStyles }) => (
+export default ({
+  index,
+  title,
+  posterurl,
+  author,
+  para,
+  labelurl,
+  labelStyles,
+}) => (
   <Grid
     columns={[1, 1, 1, 2]}
     sx={{
-      mt: index == 0 ? [4] : [5],
+      mt: index == 0 ? [4] : [4, 5],
       px: [0, 0, 4],
     }}>
-    <Card labelurl={labelurl} labelStyles={labelStyles} />
+    <Card posterurl={posterurl} labelurl={labelurl} labelStyles={labelStyles} />
     <Box sx={{ px: [0, 0, 0, 4], mt: [3, 3, 3, 0], alignSelf: 'center' }}>
       <Box>
         <Customh1

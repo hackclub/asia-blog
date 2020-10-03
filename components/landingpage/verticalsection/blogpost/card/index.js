@@ -2,7 +2,7 @@
 import { jsx, Box } from 'theme-ui'
 import CardTemplate from '../../../supplementary/cardtemplate/index'
 
-export default ({ label, labelurl, labelStyles }) => (
+export default ({ posterurl, labelurl, labelStyles }) => (
   <CardTemplate
     as='a'
     href='#'
@@ -16,7 +16,7 @@ export default ({ label, labelurl, labelStyles }) => (
       color: 'text',
       textDecoration: 'none',
       borderRadius: [5, 10],
-      backgroundImage: 'url(img/posters/recents/hacknmit.jpg)',
+      backgroundImage: `url(${posterurl})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       ':hover': {

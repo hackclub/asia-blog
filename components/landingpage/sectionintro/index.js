@@ -63,7 +63,7 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
             display: imgurl ? ['none', 'initial'] : 'none',
           }}
         />
-        <Text sx={{ fontSize: [2, 3], ml: [2, 4] }}>{para}</Text>
+        <Text sx={{ fontSize: [2, 3], ml: [0, 4] }}>{para}</Text>
       </Flex>
     </>
   )

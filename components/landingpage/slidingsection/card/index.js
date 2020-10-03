@@ -32,7 +32,7 @@ export default ({
         position: 'relative',
         bg: 'red',
         borderRadius: [10],
-        backgroundImage: `url(img/posters/hq/${posterurl})`,
+        backgroundImage: `url(${posterurl})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
