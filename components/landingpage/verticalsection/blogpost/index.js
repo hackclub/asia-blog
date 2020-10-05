@@ -17,7 +17,7 @@ export default ({
     columns={[1, 1, 1, 2]}
     sx={{
       mt: index == 0 ? [4] : [4, 5],
-      px: [0, 0, 4],
+      px: [0, 0, 5],
     }}>
     <Card posterurl={posterurl} labelurl={labelurl} labelStyles={labelStyles} />
     <Box sx={{ px: [0, 0, 0, 4], mt: [3, 3, 3, 0], alignSelf: 'center' }}>

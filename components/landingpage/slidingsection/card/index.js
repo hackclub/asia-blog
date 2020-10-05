@@ -17,7 +17,7 @@ export default ({
     as='a'
     href='#'
     sx={{
-      width: ['350px', '400px'],
+      width: ['350px', '350px'],
       display: 'inline-block',
       ml: index == 0 ? null : [3],
       mr: [3],
@@ -28,7 +28,7 @@ export default ({
     <CardTemplate
       sx={{
         width: '100%',
-        height: '300px',
+        height: '250px',
         position: 'relative',
         bg: 'red',
         borderRadius: [10],

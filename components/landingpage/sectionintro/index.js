@@ -17,7 +17,7 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
         }}>
         <h1
           sx={{
-            fontSize: [4, 5],
+            fontSize: [4, '40px'],
             // mr: [1, 5],
             pb: [2],
             mb: [0],
@@ -29,7 +29,7 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
             flex: 1,
             flexDirection: 'row-reverse',
             alignItems: 'end',
-            mb: [4],
+            mb: [3],
             display: isSlidingSection ? ['none', 'none', 'flex'] : 'none',
           }}>
           <FrontArrow
@@ -77,6 +77,7 @@ const FrontArrow = ({ callback, isAtEnd }) => (
     xmlns='http://www.w3.org/2000/svg'
     sx={{
       ml: [4],
+      width: [30],
       display: ['none', 'none', 'initial'],
       cursor: 'pointer',
       path: { fill: isAtEnd ? '#828282' : '#3F3F3F' },
@@ -104,6 +105,7 @@ const BackArrow = ({ callback, isAtStart }) => {
       sx={{
         ml: [4],
         display: ['none', 'none', 'initial'],
+        width: [30],
         path: { fill: isAtStart ? '#3F3F3F' : '#828282' },
         cursor: 'pointer',
       }}
