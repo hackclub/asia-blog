@@ -1,8 +1,9 @@
 /**@jsx jsx*/
-import { jsx, Box, Flex, Text } from 'theme-ui'
+import { jsx, Grid, Box, Flex, Text } from 'theme-ui'
 import Header from './header/index'
-
-export default ({ title }) => (
+import Card from './card/index'
+import Footer from '../footer/index'
+export default ({ title, data }) => (
   <>
     <Header title={title} />
     <Box
@@ -10,6 +11,7 @@ export default ({ title }) => (
         pl: [4, 5],
         pr: [2, 2, 0],
         mt: [5],
+        mb: [5],
         backgroundImage: [
           'none',
           'url(img/patch/section-patch.svg)',
@@ -33,9 +35,22 @@ export default ({ title }) => (
           Recent Articles
         </h1>
       </Flex>
-      <Text sx={{ fontSize: [2, 3], mt: [2], pl: [1] }}>
+      <Text sx={{ fontSize: [2, 3], mt: [2], ml: [1] }}>
         Check out these awesome articles written by hack club members!
       </Text>
+      <Grid columns={[1, 1, 2, 3]} sx={{ mt: [4] }}>
+        {data.map((item, index) => (
+          <Card
+            index={index}
+            title={item.title}
+            posterurl={item.posterurl}
+            author={item.author}
+            para={item.para}
+          />
+        ))}
+      </Grid>
     </Box>
+    <Footer />
   </>
 )
+/** name, author, para, authorImgUrl, posterurl  */
