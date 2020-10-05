@@ -9,7 +9,7 @@ import Workshops from '../components/landingpage/sections/workshops/index'
 export default function Home() {
   return (
     <>
-      <Header bg='white' />
+      <Header shouldBeTransparent={true} />
       <Hero />
       <Hq />
       <Recent />

@@ -13,7 +13,7 @@ import headerTransparencyUtility from './utilities/index'
  * Header of the website
  */
 
-export default withResizeDetector(({ width, bg }) => {
+export default withResizeDetector(({ width, shouldBeTransparent }) => {
   const [scroll, setscroll] = useState(false)
   const [transparent, setTransparency] = useState(true)
   if (width > 767) {
@@ -35,18 +35,20 @@ export default withResizeDetector(({ width, bg }) => {
       columns={[2, 2, 3, 3]}
       sx={{
         width: '100%',
-        background: transparent
-          ? 'transparent'
-          : bg
-          ? bg
-          : `linear-gradient(90.37deg, #5BC0DE 1.92%, #338EDA 78.03%)`,
+        background: shouldBeTransparent
+          ? transparent
+            ? 'transparent'
+            : 'white'
+          : 'white',
         display: 'fixed',
         zIndex: 5000,
         minHeight: '70px',
         opacity: '0.97',
         position: 'fixed',
-        borderBottom: transparent
-          ? 'none'
+        borderBottom: shouldBeTransparent
+          ? transparent
+            ? 'none'
+            : '1px solid rgba(48, 48, 48, 0.125)'
           : '1px solid rgba(48, 48, 48, 0.125)',
       }}>
       <ScrollLock isActive={scroll} />
@@ -74,12 +76,17 @@ export default withResizeDetector(({ width, bg }) => {
               fontSize: '20px',
               display: ['none', 'none', 'initial'],
               mx: 3,
-              color: bg ? 'black' : 'white',
+              color: shouldBeTransparent
+                ? transparent
+                  ? 'white'
+                  : 'black'
+                : 'black',
               cursor: 'pointer',
               fontWeight: 'normal',
+              textDecorationLine: 'none',
             },
           }}>
-          <Nav data={data} transparency={transparent} />
+          <Nav data={data} />
           <span
             onClick={() => {
               setscroll(!scroll)
@@ -119,19 +126,11 @@ export default withResizeDetector(({ width, bg }) => {
 })
 
 const Customh3 = styled.h3``
-const Nav = ({ data, transparency }) => (
+const Nav = ({ data }) => (
   <>
     {data.map((ele) => (
-      <Customh3
-        as='a'
-        href={ele.url ? ele.url : '#'}
-        sx={{ textDecorationLine: 'none' }}>
-        <span
-          sx={{
-            color: transparency ? 'white' : '',
-          }}>
-          {ele.text}
-        </span>
+      <Customh3 as='a' href={ele.url ? ele.url : '#'}>
+        <span>{ele.text}</span>
       </Customh3>
     ))}
   </>
