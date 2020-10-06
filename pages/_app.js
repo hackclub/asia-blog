@@ -6,6 +6,10 @@ import '@hackclub/theme/fonts/reg-bold.css'
 import theme from '../lib/theme/index'
 import Meta from '@hackclub/meta'
 
+import Prism from 'prismjs'
+import 'prismjs/components/prism-jsx'
+import '../lib/css/okaidia.css'
+
 import '../lib/css/index.css'
 
 import { ThemeProvider } from 'theme-ui'

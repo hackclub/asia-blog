@@ -5,6 +5,8 @@ import Hq from '../components/landingpage/sections/hq'
 import Recent from '../components/landingpage/sections/recent'
 import Events from '../components/landingpage/sections/events'
 import Workshops from '../components/landingpage/sections/workshops/index'
+import Category from '../components/landingpage/sections/category/index'
+import AMAs from '../components/landingpage/sections/ama'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Recent />
       <Events />
       <Workshops />
+      <Category />
+      <AMAs />
       <Footer />
     </>
   )

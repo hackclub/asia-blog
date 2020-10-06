@@ -14,15 +14,20 @@
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.3.0",
     "@next/mdx": "^9.5.3",
+    "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.20",
     "next": "9.5.3",
+    "prismjs": "^1.21.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-feather": "^2.0.8",
     "react-icons": "^3.11.0",
+    "react-markdown": "^4.3.1",
     "react-resize-detector": "^5.2.0",
     "react-reveal": "^1.2.2",
     "react-scrolllock": "^5.0.1",
+    "react-syntax-highlighter": "^15.1.0",
     "theme-ui": "^0.3.1"
   }
 }
