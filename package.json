@@ -13,6 +13,7 @@
     "@hackclub/markdown": "^0.0.1-alpha.0",
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.3.0",
+    "@mdx-js/loader": "^1.6.18",
     "@next/mdx": "^9.5.3",
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",

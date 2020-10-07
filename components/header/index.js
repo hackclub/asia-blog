@@ -1,129 +1,136 @@
 /**@jsx jsx */
-import { jsx, Flex, Grid, Box } from 'theme-ui'
+import { jsx, Flex, IconButton, Box } from 'theme-ui'
 import styled from '@emotion/styled'
 import Icon from '@hackclub/icons'
 import { useState } from 'react'
 import ScrollLock from 'react-scrolllock'
 import { withResizeDetector } from 'react-resize-detector'
 import Bounce from 'react-reveal/Bounce'
-
+import Button from './button'
 import headerTransparencyUtility from './utilities/index'
 
-/***
- * Header of the website
- */
-
-export default withResizeDetector(({ width, shouldBeTransparent }) => {
-  const [scroll, setscroll] = useState(false)
-  const [transparent, setTransparency] = useState(true)
-  if (width > 767) {
-    if (scroll) setscroll(false)
-  }
-
-  headerTransparencyUtility((currentPosition) => {
-    if (currentPosition > 104) {
-      setTransparency(false)
+export default withResizeDetector(
+  ({ width, shouldBeTransparent, isHomePage = true, section = '' }) => {
+    const [scroll, setscroll] = useState(false)
+    const [transparent, setTransparency] = useState(true)
+    if (width > 767) {
+      if (scroll) setscroll(false)
     }
-    if (currentPosition < 104) {
-      setTransparency(true)
-    }
-  })
 
-  return (
-    <Box
-      as='header'
-      columns={[2, 2, 3, 3]}
-      sx={{
-        width: '100%',
-        background: shouldBeTransparent
-          ? transparent
-            ? 'transparent'
-            : 'white'
-          : 'white',
-        display: 'fixed',
-        zIndex: 5000,
-        minHeight: '70px',
-        opacity: '0.97',
-        position: 'fixed',
-        borderBottom: shouldBeTransparent
-          ? transparent
-            ? 'none'
-            : '1px solid rgba(48, 48, 48, 0.125)'
-          : '1px solid rgba(48, 48, 48, 0.125)',
-      }}>
-      <ScrollLock isActive={scroll} />
-      <Overlay display={scroll} />
-      <Flex sx={{ width: '100%' }}>
-        <img
-          onClick={() => {
-            console.log('testing')
-          }}
-          src='https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png'
-          sx={{
-            width: ['100px', '110px', '120px'],
-            position: 'absolute',
-            ml: [2, 3, 2, 5],
-          }}
-        />
+    headerTransparencyUtility((currentPosition) => {
+      if (currentPosition > 104) {
+        setTransparency(false)
+      }
+      if (currentPosition < 104) {
+        setTransparency(true)
+      }
+    })
+
+    return (
+      <Box
+        as='header'
+        columns={[2, 2, 3, 3]}
+        sx={{
+          width: '100%',
+          background: shouldBeTransparent
+            ? transparent
+              ? 'transparent'
+              : 'white'
+            : 'white',
+          display: 'fixed',
+          zIndex: 5000,
+          minHeight: '60px', //70px
+          opacity: '0.97',
+          position: 'fixed',
+          borderBottom: shouldBeTransparent
+            ? transparent
+              ? 'none'
+              : '1px solid rgba(48, 48, 48, 0.125)'
+            : '1px solid rgba(48, 48, 48, 0.125)',
+        }}>
+        <ScrollLock isActive={scroll} />
+        <Overlay display={scroll} />
         <Flex
-          as='nav'
           sx={{
-            flex: 1,
-            alignItems: 'center',
-            flexDirection: ['row-reverse', 'row-reverse', 'row'],
-            justifyContent: ['initial', 'initial', 'center'],
-            a: {
-              fontSize: '20px',
-              display: ['none', 'none', 'initial'],
-              mx: 3,
-              color: shouldBeTransparent
-                ? transparent
-                  ? 'white'
-                  : 'black'
-                : 'black',
-              cursor: 'pointer',
-              fontWeight: 'normal',
-              textDecorationLine: 'none',
-            },
+            width: '100%',
+            alignItems: !isHomePage ? 'center' : null,
           }}>
-          <Nav data={data} />
-          <span
-            onClick={() => {
-              setscroll(!scroll)
-              console.log(width)
-            }}
-            sx={{ position: 'absolute', zIndex: 2000 }}>
-            <Icon
-              sx={{
-                mr: [3],
-                display: [
-                  scroll ? 'none' : 'initial',
-                  scroll ? 'none' : 'initial',
-                  'none',
-                ],
-                fill: transparent ? 'white' : 'initial',
+          {isHomePage ? (
+            <img
+              onClick={() => {
+                console.log('testing')
               }}
-              glyph='menu'
-              size={['44px']}
-            />
-            <Icon
+              src='https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png'
               sx={{
-                mr: [3],
-                display: [
-                  !scroll ? 'none' : 'initial',
-                  !scroll ? 'none' : 'initial',
-                  'none',
-                ],
+                width: ['100px', '110px', '100px'], // ['100px', '110px', '120px'],
+                position: 'absolute',
+                ml: [2, 3, 2, 5],
+                bottom: [1],
               }}
-              size={['44px']}
-              glyph='view-close'
             />
-          </span>
+          ) : (
+            <Button section={section} />
+          )}
+          <Flex
+            as='nav'
+            sx={{
+              flex: 1,
+              alignItems: 'center',
+              flexDirection: ['row-reverse', 'row-reverse', 'row'],
+              justifyContent: ['initial', 'initial', 'center'],
+              a: {
+                fontSize: '18px', //'20px',
+                display: ['none', 'none', 'initial'],
+                mx: 3,
+                color: shouldBeTransparent
+                  ? transparent
+                    ? 'white'
+                    : 'black'
+                  : 'black',
+                cursor: 'pointer',
+                fontWeight: 'normal',
+                textDecorationLine: 'none',
+              },
+            }}>
+            <Nav data={data} />
+            <span
+              onClick={() => {
+                setscroll(!scroll)
+                console.log(width)
+              }}
+              sx={{ position: 'absolute', zIndex: 2000 }}>
+              <Icon
+                sx={{
+                  mr: [3],
+                  display: [
+                    scroll ? 'none' : 'initial',
+                    scroll ? 'none' : 'initial',
+                    'none',
+                  ],
+                  fill: transparent ? 'white' : 'initial',
+                }}
+                glyph='menu'
+                size={['44px']}
+              />
+              <Icon
+                sx={{
+                  mr: [3],
+                  display: [
+                    !scroll ? 'none' : 'initial',
+                    !scroll ? 'none' : 'initial',
+                    'none',
+                  ],
+                }}
+                size={['44px']}
+                glyph='view-close'
+              />
+            </span>
+          </Flex>
         </Flex>
-      </Flex>
-    </Box>
-  )
-})
+      </Box>
+    )
+  }
+)
 
 const Customh3 = styled.h3``
 const Nav = ({ data }) => (

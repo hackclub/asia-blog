@@ -42,11 +42,12 @@ export default ({ content, section, slug }) => (
   <>
     <Styled as='article' className='docs'>
       <ReactMarkdown
-        sx={{ mt: 6 }}
         source={content}
         escapeHtml={false}
-        transformImageUri={(imguri) =>
-          `../../content/${section}/${slug}/${imguri}`
+        transformImageUri={(uri) =>
+          uri.startsWith('http')
+            ? uri
+            : `../../content/${section}/${slug}/${uri}`
         }
       />
     </Styled>
