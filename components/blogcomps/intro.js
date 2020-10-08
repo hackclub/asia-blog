@@ -23,7 +23,6 @@ export default ({ heading, posterimgurl }) => (
       <Authorcomp author={'Athul Blesson'} isInBlog={true} />
       <img sx={{ maxWidth: '100%', mt: [4] }} src={posterimgurl} />
       {console.log(posterimgurl)}
-      <BackButton />
     </Box>
   </>
 )

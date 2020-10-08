@@ -4,8 +4,6 @@ para: Read this awesome blog from a professional motorcycle track racer. You wil
 author: Athul Blesson
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zDMxb13ibqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Talk to any motorcyclist and you’re likely to hear how they love the exhilarating feeling of freedom they get while riding. The feel of the wind, the intensity of the smells in the air, the vibrant views that come at you as if you’re wearing 3D glasses …
 
 Even still, there are some people who remain unconvinced about the joys of riding—whether it’s procrastination, fear, or disinterest—they just can’t or won’t see the proverbial light.
@@ -37,3 +35,12 @@ Improved cognitive functioning, better concentration, less stress, better memory
 Now, go forth and share your awesomeness with pride!
 
 Check out [this study](https://www.jstage.jst.go.jp/article/jsaeijae/5/2/5_20144193/_pdf) to learn more about cognitive functions and motorcycling.
+
+## Check out a video of mine
+
+<br/>
+
+<div class='embed-container'>
+<iframe src='https://www.youtube.com/embed/rumyxiDst3w' frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen>
+</iframe>
+</div>
