@@ -1,7 +1,7 @@
 import { flatMap } from 'lodash'
 import { useState, useEffect } from 'react'
 
-export default (elementClassName) => {
+export default elementClassName => {
   const [sliderElement, setSliderElement] = useState(null)
   const [prevScroll, setPrevScroll] = useState(0)
 
@@ -13,9 +13,9 @@ export default (elementClassName) => {
     return () => {}
   }, [])
 
-  const isScrolled = (sliderElement) =>
+  const isScrolled = sliderElement =>
     sliderElement.scrollLeft != 0 ? true : false
-  const isAtEndFlag = (currentScroll) =>
+  const isAtEndFlag = currentScroll =>
     currentScroll != 0 ? (currentScroll == prevScroll ? true : false) : false
 
   return {
@@ -30,6 +30,6 @@ export default (elementClassName) => {
       const isAtEnd = isAtEndFlag(sliderElement.scrollLeft)
       setPrevScroll(sliderElement.scrollLeft)
       return { isAtStart: isScrolled(sliderElement), isAtEnd: isAtEnd }
-    },
+    }
   }
 }

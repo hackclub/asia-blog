@@ -20,12 +20,12 @@ export default class App extends NextApp {
     return (
       <ThemeProvider theme={theme}>
         <Meta
-          name='Blog-Hack Club India'
-          title='Blog-Hack Club India'
+          name="Blog-Hack Club India"
+          title="Blog-Hack Club India"
           as={Head}
         />
         <Head>
-          <meta name='twitter:site' content='@hackclubindia' />{' '}
+          <meta name="twitter:site" content="@hackclubindia" />{' '}
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

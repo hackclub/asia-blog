@@ -16,7 +16,7 @@ export default ({ title, data }) => (
           'none',
           'url(img/patch/section-patch.svg)',
           'url(img/patch/section-patch.svg)',
-          'url(img/patch/section-patch-2.svg) , url(img/patch/section-patch.svg)',
+          'url(img/patch/section-patch-2.svg) , url(img/patch/section-patch.svg)'
         ],
 
         backgroundRepeat: 'no-repeat',
@@ -24,14 +24,16 @@ export default ({ title, data }) => (
           'left -450px top -80px',
           'left -400px top -20px',
           'left -400px top -20px',
-          'right -450px bottom 80px , left -420px top -120px',
+          'right -450px bottom 80px , left -420px top -120px'
         ],
-        backgroundSize: ['800px', '800px', 'default,800px', 'default,800px'],
-      }}>
+        backgroundSize: ['800px', '800px', 'default,800px', 'default,800px']
+      }}
+    >
       <Flex sx={{ alignItems: 'end' }}>
-        <img src='img/labels/blog.png' sx={{ height: [60] }} />
+        <img src="img/labels/blog.png" sx={{ height: [60] }} />
         <h1
-          sx={{ ml: [3], fontSize: [5], flex: 1, mb: [0], lineHeight: '120%' }}>
+          sx={{ ml: [3], fontSize: [5], flex: 1, mb: [0], lineHeight: '120%' }}
+        >
           Recent Articles
         </h1>
       </Flex>

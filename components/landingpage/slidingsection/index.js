@@ -21,8 +21,9 @@ export default ({ data, mt, isBlog = false }) => (
       sx={{
         pt: [4],
         overflowX: 'auto',
-        whiteSpace: 'nowrap',
-      }}>
+        whiteSpace: 'nowrap'
+      }}
+    >
       {data.data.map((data, index) => (
         <Card
           index={index}

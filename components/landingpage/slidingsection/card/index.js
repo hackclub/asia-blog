@@ -11,11 +11,11 @@ export default ({
   author,
   para,
   labelimgurl,
-  customAfterStyle,
+  customAfterStyle
 }) => (
   <Box
-    as='a'
-    href='#'
+    as="a"
+    href="#"
     sx={{
       width: ['350px', '350px'],
       display: 'inline-block',
@@ -23,8 +23,9 @@ export default ({
       mr: [3],
       whiteSpace: 'normal',
       color: 'text',
-      textDecoration: 'none',
-    }}>
+      textDecoration: 'none'
+    }}
+  >
     <CardTemplate
       sx={{
         width: '100%',
@@ -48,21 +49,23 @@ export default ({
 
           ...customAfterStyle,
 
-          backgroundImage: `url(${labelimgurl})`,
+          backgroundImage: `url(${labelimgurl})`
         },
         ':hover': {
           transform: 'scale(1.01)',
-          transition: '0.1s',
-        },
-      }}></CardTemplate>
+          transition: '0.1s'
+        }
+      }}
+    ></CardTemplate>
     <h1
       sx={{
         mb: [0],
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        ':hover': { textDecorationLine: 'underline' },
-      }}>
+        ':hover': { textDecorationLine: 'underline' }
+      }}
+    >
       {title}
     </h1>
     <AuthorComp author={author} />

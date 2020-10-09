@@ -2,10 +2,12 @@
   "name": "hackclubindiablogs",
   "version": "0.1.0",
   "private": true,
+  "author": "<harsh@hackclub.com>",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "yarn run bloginit && next dev",
+    "build": "yarn run bloginit && next build",
+    "start": "next start",
+    "bloginit": "node lib/utility/scripts/blogsections_init.js"
   },
   "dependencies": {
     "@emotion/styled": "^10.0.27",
@@ -18,8 +20,10 @@
     "geopattern": "^1.2.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.20",
-    "next": "9.5.3",
+    "next": "^9.5.4",
+    "prettier": "^2.1.2",
     "prismjs": "^1.21.0",
+    "ramda": "^0.27.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-feather": "^2.0.8",

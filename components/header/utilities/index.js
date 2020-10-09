@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { throttle } from 'lodash'
 
-export default (callback) => {
+export default callback => {
   const scrollHandler = () => {
     const currentPosition = window ? window.scrollY : null
     callback(currentPosition)

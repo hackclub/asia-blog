@@ -12,8 +12,9 @@ export default ({ author, isInBlog = false }) => (
       sx={{
         pl: isInBlog ? [2] : [3],
         fontSize: isInBlog ? [1] : [2],
-        ':hover': { textDecorationLine: 'underline' },
-      }}>
+        ':hover': { textDecorationLine: 'underline' }
+      }}
+    >
       - {isInBlog ? '6th Oct 2020,' : ''} {author}
     </Text>
   </Flex>

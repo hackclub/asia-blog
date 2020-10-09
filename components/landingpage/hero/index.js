@@ -4,7 +4,7 @@ import Card from './card/index'
 
 export default () => (
   <Box
-    as='section'
+    as="section"
     sx={{
       //    height: 700,
       pb: [3, 5],
@@ -16,12 +16,13 @@ export default () => (
       backgroundSize: [
         '0px ,250px 250px, 250px 250px, auto',
         '0px ,350px 350px, 350px 350px, auto',
-        '600px ,350px 350px, 350px 350px, auto',
+        '600px ,350px 350px, 350px 350px, auto'
       ], //40%
       backgroundPosition: 'right top,right bottom, left top',
       display: 'flex',
-      alignItems: 'center',
-    }}>
+      alignItems: 'center'
+    }}
+  >
     <Box sx={{ pl: [4, 5], pr: [2, 2, 0] }}>
       <h1
         sx={{
@@ -31,9 +32,10 @@ export default () => (
             '0px 4px 4px rgba(0, 0, 0, 0.25)',
             '0px 4px 4px rgba(0, 0, 0, 0.25)',
             '0px 4px 4px rgba(0, 0, 0, 0.25)',
-            'none',
-          ],
-        }}>
+            'none'
+          ]
+        }}
+      >
         Welcome To <br />
         Hack Club India’s Blog
       </h1>

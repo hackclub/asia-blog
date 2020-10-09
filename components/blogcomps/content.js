@@ -56,11 +56,11 @@ export const Styled = styled(BaseStyles)`
 
 export default ({ content, section, slug }) => (
   <>
-    <Styled as='article' className='docs'>
+    <Styled as="article" className="docs">
       <ReactMarkdown
         source={content}
         escapeHtml={false}
-        transformImageUri={(uri) =>
+        transformImageUri={uri =>
           uri.startsWith('http')
             ? uri
             : `../../content/${section}/${slug}/${uri}`
