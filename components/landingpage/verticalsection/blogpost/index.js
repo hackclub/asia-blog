@@ -11,20 +11,21 @@ export default ({
   author,
   para,
   labelurl,
-  labelStyles,
+  labelStyles
 }) => (
   <Grid
     columns={[1, 1, 1, 2]}
     sx={{
       mt: index == 0 ? [4] : [4, 5],
-      px: [0, 0, 5],
-    }}>
+      px: [0, 0, 5]
+    }}
+  >
     <Card posterurl={posterurl} labelurl={labelurl} labelStyles={labelStyles} />
     <Box sx={{ px: [0, 0, 0, 4], mt: [3, 3, 3, 0], alignSelf: 'center' }}>
       <Box>
         <Customh1
-          as='a'
-          href='#'
+          as="a"
+          href="#"
           sx={{
             display: 'block',
             fontWeight: 'bold',
@@ -36,8 +37,9 @@ export default ({
             textOverflow: 'ellipsis',
             textDecoration: 'none',
             color: 'text',
-            ':hover': { textDecorationLine: 'underline' },
-          }}>
+            ':hover': { textDecorationLine: 'underline' }
+          }}
+        >
           {title}
         </Customh1>
         <AuthorComp author={author} />

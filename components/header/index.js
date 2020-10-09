@@ -17,7 +17,7 @@ export default withResizeDetector(
       if (scroll) setscroll(false)
     }
 
-    headerTransparencyUtility((currentPosition) => {
+    headerTransparencyUtility(currentPosition => {
       if (currentPosition > 104) {
         setTransparency(false)
       }
@@ -28,7 +28,7 @@ export default withResizeDetector(
 
     return (
       <Box
-        as='header'
+        as="header"
         columns={[2, 2, 3, 3]}
         sx={{
           width: '100%',
@@ -46,33 +46,35 @@ export default withResizeDetector(
             ? transparent
               ? 'none'
               : '1px solid rgba(48, 48, 48, 0.125)'
-            : '1px solid rgba(48, 48, 48, 0.125)',
-        }}>
+            : '1px solid rgba(48, 48, 48, 0.125)'
+        }}
+      >
         <ScrollLock isActive={scroll} />
         <Overlay display={scroll} />
         <Flex
           sx={{
             width: '100%',
-            alignItems: !isHomePage ? 'center' : null,
-          }}>
+            alignItems: !isHomePage ? 'center' : null
+          }}
+        >
           {isHomePage ? (
             <img
               onClick={() => {
                 console.log('testing')
               }}
-              src='https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png'
+              src="https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png"
               sx={{
                 width: ['100px', '110px', '100px'], // ['100px', '110px', '120px'],
                 position: 'absolute',
                 ml: [2, 3, 2, 5],
-                bottom: [1],
+                bottom: [1]
               }}
             />
           ) : (
             <Button section={section} />
           )}
           <Flex
-            as='nav'
+            as="nav"
             sx={{
               flex: 1,
               alignItems: 'center',
@@ -89,27 +91,29 @@ export default withResizeDetector(
                   : 'black',
                 cursor: 'pointer',
                 fontWeight: 'normal',
-                textDecorationLine: 'none',
-              },
-            }}>
+                textDecorationLine: 'none'
+              }
+            }}
+          >
             <Nav data={data} />
             <span
               onClick={() => {
                 setscroll(!scroll)
                 console.log(width)
               }}
-              sx={{ position: 'absolute', zIndex: 2000 }}>
+              sx={{ position: 'absolute', zIndex: 2000 }}
+            >
               <Icon
                 sx={{
                   mr: [3],
                   display: [
                     scroll ? 'none' : 'initial',
                     scroll ? 'none' : 'initial',
-                    'none',
+                    'none'
                   ],
-                  fill: transparent ? 'white' : 'initial',
+                  fill: transparent ? 'white' : 'initial'
                 }}
-                glyph='menu'
+                glyph="menu"
                 size={['44px']}
               />
               <Icon
@@ -118,11 +122,11 @@ export default withResizeDetector(
                   display: [
                     !scroll ? 'none' : 'initial',
                     !scroll ? 'none' : 'initial',
-                    'none',
-                  ],
+                    'none'
+                  ]
                 }}
                 size={['44px']}
-                glyph='view-close'
+                glyph="view-close"
               />
             </span>
           </Flex>
@@ -135,8 +139,8 @@ export default withResizeDetector(
 const Customh3 = styled.h3``
 const Nav = ({ data }) => (
   <>
-    {data.map((ele) => (
-      <Customh3 as='a' href={ele.url ? ele.url : '#'}>
+    {data.map(ele => (
+      <Customh3 as="a" href={ele.url ? ele.url : '#'}>
         <span>{ele.text}</span>
       </Customh3>
     ))}
@@ -148,7 +152,7 @@ const data = [
   { text: 'Blog', url: './' },
   { text: 'Join', url: 'https://github.com/hackclub/hackstore' },
   { text: 'Team', url: './team' },
-  { text: 'FAQs', url: './team' },
+  { text: 'FAQs', url: './team' }
 ]
 
 const Overlay = ({ display }) => (
@@ -161,13 +165,14 @@ const Overlay = ({ display }) => (
       opacity: '0.99',
       display: display ? 'flex' : 'none',
       pt: '90px',
-      flexDirection: 'column',
-    }}>
-    <OverlayItem Text={'Home'} url='./' />
-    <OverlayItem Text={'Blog'} url='./' />
-    <OverlayItem Text={'Join'} url='./team' />
-    <OverlayItem Text={'Team'} url='./team' />
-    <OverlayItem Text={'FAQs'} url='./team' />
+      flexDirection: 'column'
+    }}
+  >
+    <OverlayItem Text={'Home'} url="./" />
+    <OverlayItem Text={'Blog'} url="./" />
+    <OverlayItem Text={'Join'} url="./team" />
+    <OverlayItem Text={'Team'} url="./team" />
+    <OverlayItem Text={'FAQs'} url="./team" />
   </div>
 )
 
@@ -181,12 +186,14 @@ const OverlayItem = ({ Text, url }) => (
         borderBottom: '1px solid',
         borderColor: 'smoke',
         pb: 3,
-        pl: 3,
-      }}>
+        pl: 3
+      }}
+    >
       <Bounce top>
         <b
           sx={{ fontWeight: 'regular', ':hover': { cursor: 'pointer' } }}
-          onClick={() => Open(url)}>
+          onClick={() => Open(url)}
+        >
           {Text}
         </b>
       </Bounce>
@@ -194,6 +201,6 @@ const OverlayItem = ({ Text, url }) => (
   </div>
 )
 
-const Open = (url) => {
+const Open = url => {
   window.open(url, '_self')
 }

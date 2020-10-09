@@ -5,8 +5,8 @@ import { isVisibleAtMin } from './utility/index'
 
 export default ({ rotate, imgurl, title, para, index }) => (
   <Box
-    as='a'
-    href='#'
+    as="a"
+    href="#"
     sx={{
       //    width: [250],
       display: isVisibleAtMin(index)
@@ -20,33 +20,37 @@ export default ({ rotate, imgurl, title, para, index }) => (
       filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
       ':hover': {
         transform: 'scale(1.06) rotate(0deg)',
-        transition: '0.2s',
-      },
-    }}>
+        transition: '0.2s'
+      }
+    }}
+  >
     <Box
       sx={{
         height: [200],
         borderRadius: ['10px 10px 0px 0px'],
 
         backgroundImage: `url(${imgurl})`,
-        backgroundSize: 'cover',
-      }}></Box>
+        backgroundSize: 'cover'
+      }}
+    ></Box>
     <Box
       sx={{
         bg: 'white',
         py: [3],
         color: 'text',
         px: [2],
-        borderRadius: '0px 0px 10px 10px',
-      }}>
+        borderRadius: '0px 0px 10px 10px'
+      }}
+    >
       <Text
         sx={{
           fontSize: [2],
           fontWeight: 'heading',
           whiteSpace: 'nowrap',
           textOverflow: 'ellipsis',
-          overflow: 'hidden',
-        }}>
+          overflow: 'hidden'
+        }}
+      >
         {title}
       </Text>
       <Text sx={{ fontSize: [1] }}>{para}</Text>

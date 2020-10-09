@@ -13,7 +13,7 @@ export default ({ data }) => (
         'none',
         'url(img/patch/section-patch.svg)',
         'url(img/patch/section-patch.svg)',
-        'url(img/patch/section-patch-2.svg) , url(img/patch/section-patch.svg)',
+        'url(img/patch/section-patch-2.svg) , url(img/patch/section-patch.svg)'
       ],
 
       backgroundRepeat: 'no-repeat',
@@ -21,10 +21,11 @@ export default ({ data }) => (
         'left -450px top -80px',
         'left -400px top -20px',
         'left -400px top -20px',
-        'right -450px bottom 80px , left -420px top -120px',
+        'right -450px bottom 80px , left -420px top -120px'
       ],
-      backgroundSize: ['800px', '800px', 'default,800px', 'default,800px'],
-    }}>
+      backgroundSize: ['800px', '800px', 'default,800px', 'default,800px']
+    }}
+  >
     <Sectionintro
       title={data.title}
       className={data.className}

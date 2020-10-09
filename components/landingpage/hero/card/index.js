@@ -5,8 +5,8 @@ import getLabelData from '../../../../lib/data/labels/index'
 
 export default () => (
   <CustomBox
-    as='a'
-    href='#'
+    as="a"
+    href="#"
     sx={{
       display: ['block'],
       textDecorationLine: 'none',
@@ -22,21 +22,23 @@ export default () => (
         height: ['7rem', '8rem'],
         bottom: ['-4rem'],
         right: ['0rem'],
-        backgroundImage: `url(${getLabelData('hackstore').imgurl})`,
+        backgroundImage: `url(${getLabelData('hackstore').imgurl})`
       },
       ':hover': {
         transform: 'scale(1.01)',
-        transition: '0.2s',
-      },
-    }}>
+        transition: '0.2s'
+      }
+    }}
+  >
     <Box
       sx={{
         //   display: 'inline-block',
         // maxWidth: [500],
         pl: [3, 3, 5],
         pt: [2],
-        width: '100%',
-      }}>
+        width: '100%'
+      }}
+    >
       <h1
         sx={{
           // display: 'inline-block',
@@ -44,9 +46,10 @@ export default () => (
           fontSize: [4, '42px', 5],
           lineHeight: '100%',
           ':hover': {
-            textDecorationLine: 'underline',
-          },
-        }}>
+            textDecorationLine: 'underline'
+          }
+        }}
+      >
         Hack Box Beta Release!
       </h1>
       <Text sx={{ fontSize: [1, 2] }}>- Harsh Bajpai</Text>
@@ -56,8 +59,9 @@ export default () => (
         sx={{
           fontSize: [2, 3],
           textAlign: 'start',
-          textShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
-        }}>
+          textShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)'
+        }}
+      >
         Hack Box beta is finally released, check out this super awesome blog to
         know about it.
       </Text>

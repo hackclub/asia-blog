@@ -15,8 +15,9 @@ export default ({ heading, posterimgurl }) => (
           ...theme.text.headline,
           fontSize: [4, '40px'],
           mt: [0],
-          pr: [3],
-        }}>
+          pr: [3]
+        }}
+      >
         {heading}
       </Text>
       {console.log('it is', process.env.REACT_IMAGE_BASE_URL)}
@@ -38,9 +39,9 @@ export const NavButton = ({ color = 'red', sx, ...props }) => (
       transition: 'box-shadow .125s ease-in-out',
       ':hover,:focus': {
         boxShadow: '0 0 0 2px',
-        outline: 'none',
+        outline: 'none'
       },
-      ...sx,
+      ...sx
     }}
   />
 )
@@ -48,9 +49,10 @@ export const NavButton = ({ color = 'red', sx, ...props }) => (
 const BackButton = ({ to = '/', text = 'Back' }) => (
   <Link href={to} passHref>
     <NavButton
-      as='a'
+      as="a"
       title={to === '/' ? 'Back to homepage' : 'Back'}
-      sx={{ display: 'flex', width: 'auto', pr: 2, mr: 'auto' }}>
+      sx={{ display: 'flex', width: 'auto', pr: 2, mr: 'auto' }}
+    >
       <ArrowLeft />
       {text}
     </NavButton>

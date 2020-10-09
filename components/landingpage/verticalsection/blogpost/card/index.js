@@ -4,8 +4,8 @@ import CardTemplate from '../../../supplementary/cardtemplate/index'
 
 export default ({ posterurl, labelurl, labelStyles }) => (
   <CardTemplate
-    as='a'
-    href='#'
+    as="a"
+    href="#"
     sx={{
       display: 'inline-block',
       height: [300, 350],
@@ -21,7 +21,7 @@ export default ({ posterurl, labelurl, labelStyles }) => (
       backgroundPosition: 'center',
       ':hover': {
         transform: 'scale(1.01)',
-        transition: '0.2s',
+        transition: '0.2s'
       },
       ':after': {
         width: ['5rem', '6rem'],
@@ -30,7 +30,8 @@ export default ({ posterurl, labelurl, labelStyles }) => (
         right: ['-1rem'],
         transform: 'rotate(10deg)',
         ...labelStyles,
-        backgroundImage: `url(${labelurl})`,
-      },
-    }}></CardTemplate>
+        backgroundImage: `url(${labelurl})`
+      }
+    }}
+  ></CardTemplate>
 )

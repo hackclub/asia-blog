@@ -17,9 +17,10 @@ export default ({ section }) => (
       ':hover': {
         border: '3px solid',
         borderColor: 'red',
-        transition: '0.1s',
-      },
-    }}>
+        transition: '0.1s'
+      }
+    }}
+  >
     <ArrowLeft sx={{ color: 'red' }} />
     <Text sx={{ pl: [1], color: 'red' }}>
       Back {section ? `to ${section}` : ''}
