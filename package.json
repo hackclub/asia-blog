@@ -4,10 +4,11 @@
   "private": true,
   "author": "<harsh@hackclub.com>",
   "scripts": {
-    "dev": "yarn run bloginit && next dev",
-    "build": "yarn run bloginit && next build",
+    "dev": "yarn run blog_init && next dev",
+    "build": "yarn run blog_init && next build",
     "start": "next start",
-    "bloginit": "node lib/utility/scripts/blogsections_init.js"
+    "blog_init": "node lib/utility/scripts/blogsections_init.js",
+    "format": "yarn prettier --write ."
   },
   "dependencies": {
     "@emotion/styled": "^10.0.27",
