@@ -1,18 +1,18 @@
 /**@jsx jsx*/
 import { jsx, Box, Text, Grid } from 'theme-ui'
 import Card from './card/index'
+import * as _ from 'ramda'
 
 export default () => (
   <div
     sx={{
-      //        pl: [4, 5], pr: [2, 2, 0], mt: [4, 5]
       mt: [4, 5]
     }}
   >
     <div
       sx={{
         pb: [5],
-        bg: 'red', //url(img/patch/topmount.svg),
+        bg: 'red',
         background: `url(img/patch/topmount.svg),linear-gradient(120.29deg,rgba(235,35,63,0.86),rgba(183,3,28,0.86)),url(img/patch/triangle-pattern.svg)`,
         backgroundRepeat: 'no-repeat,no-repeat,repeat',
         backgroundPosition: [
@@ -53,15 +53,18 @@ export default () => (
           justifyContent: 'center'
         }}
       >
-        {data.map((item, index) => (
-          <Card
-            index={index}
-            rotate={item.rotate}
-            imgurl={item.imgurl}
-            title={item.title}
-            para={item.para}
-          />
-        ))}
+        {_.map(
+          (item, index) => (
+            <Card
+              index={index}
+              rotate={item.rotate}
+              imgurl={item.imgurl}
+              title={item.title}
+              para={item.para}
+            />
+          ),
+          data
+        )}
       </Grid>
     </div>
   </div>

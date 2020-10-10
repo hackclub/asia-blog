@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { jsx, Flex, IconButton, Box } from 'theme-ui'
+import { jsx, Flex, Box } from 'theme-ui'
 import styled from '@emotion/styled'
 import Icon from '@hackclub/icons'
 import { useState } from 'react'
@@ -7,15 +7,25 @@ import ScrollLock from 'react-scrolllock'
 import { withResizeDetector } from 'react-resize-detector'
 import Bounce from 'react-reveal/Bounce'
 import Button from './button'
+
 import headerTransparencyUtility from './utilities/index'
+import resizeHandlerUtility from './utilities/index'
+
+import * as _ from 'ramda'
 
 export default withResizeDetector(
   ({ width, shouldBeTransparent, isHomePage = true, section = '' }) => {
     const [scroll, setscroll] = useState(false)
     const [transparent, setTransparency] = useState(true)
-    if (width > 767) {
-      if (scroll) setscroll(false)
-    }
+
+    resizeHandlerUtility(
+      () => {
+        setscroll(false)
+      },
+      width,
+      scroll,
+      767
+    )
 
     headerTransparencyUtility(currentPosition => {
       if (currentPosition > 104) {
@@ -111,10 +121,14 @@ export default withResizeDetector(
                     scroll ? 'none' : 'initial',
                     'none'
                   ],
-                  fill: transparent ? 'white' : 'initial'
+                  fill: isHomePage
+                    ? transparent
+                      ? 'white'
+                      : 'initial'
+                    : 'initial'
                 }}
                 glyph="menu"
-                size={['44px']}
+                size={['40px']}
               />
               <Icon
                 sx={{
@@ -125,7 +139,7 @@ export default withResizeDetector(
                     'none'
                   ]
                 }}
-                size={['44px']}
+                size={['40px']}
                 glyph="view-close"
               />
             </span>
@@ -139,11 +153,14 @@ export default withResizeDetector(
 const Customh3 = styled.h3``
 const Nav = ({ data }) => (
   <>
-    {data.map(ele => (
-      <Customh3 as="a" href={ele.url ? ele.url : '#'}>
-        <span>{ele.text}</span>
-      </Customh3>
-    ))}
+    {_.map(
+      ele => (
+        <Customh3 as="a" href={ele.url ? ele.url : '#'}>
+          <span>{ele.text}</span>
+        </Customh3>
+      ),
+      data
+    )}
   </>
 )
 

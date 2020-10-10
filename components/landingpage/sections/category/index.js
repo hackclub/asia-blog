@@ -1,5 +1,7 @@
 /**@jsx jsx*/
 import { jsx, Box, Text, Grid, Flex } from 'theme-ui'
+import * as _ from 'ramda'
+
 export default () => (
   <Box as="section" sx={{ pl: [4, 5], pr: [2] }}>
     <h1 sx={{ fontSize: [4, 5], mb: [0] }}>Browser by category!</h1>
@@ -7,9 +9,12 @@ export default () => (
       Browse this Blog via different categories!
     </Text>{' '}
     <Grid columns={[2, 2, 3, 4]} sx={{ pt: [3, 4] }}>
-      {arr.map(ele => (
-        <ContentElement text={ele.text} bg={ele.bg} background={ele.bggrad} />
-      ))}
+      {_.map(
+        ele => (
+          <ContentElement text={ele.text} bg={ele.bg} background={ele.bggrad} />
+        ),
+        arr
+      )}
     </Grid>
   </Box>
 )

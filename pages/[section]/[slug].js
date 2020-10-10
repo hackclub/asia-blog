@@ -8,7 +8,6 @@ import getAuthorImageUrl from '../../lib/data/author/index'
 import Suggestions from '../../components/blogcomps/suggestions'
 import _ from 'ramda'
 
-
 export default ({ section, slug, data, content }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
@@ -35,14 +34,13 @@ export const getStaticPaths = () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  
   const {
     getFile,
     getBlogData,
     getBlogContent,
     getPosterUrl
   } = require('../../lib/utility/index')
-  
+
   const { slug, section } = params
 
   const getData = _.pipe(await getFile, getBlogData)
