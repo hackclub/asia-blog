@@ -61,6 +61,8 @@ export default () => (
               imgurl={item.imgurl}
               title={item.title}
               para={item.para}
+              url={item.url}
+              key={index}
             />
           ),
           data
@@ -75,18 +77,21 @@ const data = [
     rotate: '1deg',
     imgurl: 'img/workshops/automation.png',
     title: 'Twitter Automation',
-    para: 'Automate almost everything about your twitter account!'
+    para: 'Automate almost everything about your twitter account!',
+    url:'https://workshops.hackclub.com/selenium/'
   },
   {
     rotate: '-1deg',
     imgurl: 'img/workshops/dicegame.png',
     title: 'Dice game App',
-    para: 'Make a dice game app in react native! And make it awesome'
+    para: 'Make a dice game app in react native! And make it awesome',
+    url:'https://workshops.hackclub.com/dicegamereactnative/'
   },
   {
     rotate: '2deg',
     imgurl: 'img/workshops/hackide.png',
     title: 'Hack IDE',
-    para: 'Make and online IDE with the help of HTML,JS and CSS!'
+    para: 'Make and online IDE with the help of HTML,JS and CSS!',
+    url: 'https://workshops.hackclub.com/hackide/'
   }
 ]

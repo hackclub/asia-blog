@@ -3,10 +3,11 @@
 import { jsx, Flex, Box, Text } from 'theme-ui'
 import { isVisibleAtMin } from './utility/index'
 
-export default ({ rotate, imgurl, title, para, index }) => (
+export default ({ rotate, imgurl, title, para, index, url }) => (
   <Box
     as="a"
-    href="#"
+    href={url?url:'#'}
+    target="blank"
     sx={{
       //    width: [250],
       display: isVisibleAtMin(index)
