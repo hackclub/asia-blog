@@ -2,6 +2,7 @@
 title: How riding a motorcyle can make you happier!
 para: Read this awesome blog from a professional motorcycle track racer. You will discover how riding a bike can make your happy!
 author: Athul Blesson
+date: 11-10-2020
 ---
 
 Talk to any motorcyclist and you’re likely to hear how they love the exhilarating feeling of freedom they get while riding. The feel of the wind, the intensity of the smells in the air, the vibrant views that come at you as if you’re wearing 3D glasses …

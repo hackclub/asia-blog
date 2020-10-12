@@ -16,7 +16,8 @@ export default ({ section, slug, data, content }) => {
       <Container variant="copy" as="main">
         <Intro
           heading={data.title}
-          authorimgurl={data.author}
+          author={data.author}
+          date={data.date}
           posterimgurl={data.posterimgurl}
         />
         <Content content={content} section="articles" slug={slug} />
