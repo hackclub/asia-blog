@@ -20,7 +20,7 @@ export default ({ section, slug, data, content }) => {
           date={data.date}
           posterimgurl={data.posterimgurl}
         />
-        <Content content={content} section="articles" slug={slug} />
+        <Content content={content} section={section} slug={slug} />
       </Container>
       <Suggestions section={section} />
       <Footer />
@@ -50,8 +50,9 @@ export const getStaticProps = async ({ params }) => {
   const data = getData(section, slug)
   const content = getContent(section, slug)
 
+ 
   data['authorimgurl'] = getAuthorImageUrl(data.author)
   data['posterimgurl'] = getPosterUrl(section, slug, true)
-
+  
   return { props: { section, slug, data, content } }
 }
