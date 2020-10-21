@@ -14,15 +14,13 @@ This article will answer the question that has troubled developers for time imme
 
 ![confusion image](https://cloud-lhc526sx5.vercel.app/0image.png)
 
-The resources that you use will decide how quickly you will be able to progress with the programming language/framework you want to learn. Make sure the resources are not too many as it might create confusion in your mind, a lot of people present abstractions via different means.
-
 ## Google some good resources!
 
 Open your browser and ask for some help from your best buddy Google to tell you some good resources! Check out platforms like [Reddit](https://www.reddit.com/) and [Quora](https://www.quora.com/) to see what resources people are using to learn the programming language/framework you want to learn.
 
 <img src="https://cloud-5w4jbdgyk.vercel.app/0image.png" alt="resources image" width="300px" />
 
-Researching on the web for resources might sound time-consuming but it will help you in the long run. If you find resources whom a lot of people consider as good then the chances that you too will find it easy to understand are high. So spend some good enough time researching the web!
+Researching on the web for resources might sound time-consuming but it will help you in the long run. If you find resources whom a lot of people consider as good then the chances are that you too will find it easy to understand are high. So spend some good enough time researching the web!
 
 The resources that you use will decide how quickly you will be able to progress with the programming language/framework that you want to learn. Make sure the resources are not too many as it might create confusion in your mind because a lot of people present abstractions via different means.
 
@@ -32,7 +30,7 @@ I always emphasize that it is very important to at least once read the official 
 
 ![](https://media.giphy.com/media/6Iu6ctvKySRcZd7oQU/giphy.gif)
 
-Now, I know that to a lot of people new to programming official documentation seems scary. I would suggest you learn the basics from some other resource which will provide you some good abstraction and then once you feel a bit comfortable go and read the official documentation!
+Now, I know that to a lot of people new to programming reading official documentation seems scary. I would suggest you learn the basics from some other resource which will provide you some good abstraction and then once you feel a bit comfortable go and read the official documentation!
 
 ## Follow! Follow! Follow!
 
@@ -44,7 +42,7 @@ Make sure the platform on which you follow them is a place where they regularly 
 
 ### How will it help me?
 
-Following the best people in your interested language/framework will help you to know some advanced tricks and tips. These people are the best of the best so you know following their way of programming will introduce you to the best practices in the programming language/framework that you want to learn.
+Following the best people in your interested language/framework will help you to know some advanced tricks and tips. These people are the best of the best. So, you know following their way of programming will introduce you to the best practices in the programming language/framework that you want to learn.
 
 ### Platforms to follow them
 
@@ -98,4 +96,4 @@ So take your time in the beginning and don’t rush through the basics, this is 
 
 ## Conclusion
 
-These were some important points that I consider might help you on your journey to learn a programming language/framework. I hope you find them helpful in your developer!
+These were some important points that I consider might help you on your journey to learn a programming language/framework. I hope you find them helpful in your developer journey!
