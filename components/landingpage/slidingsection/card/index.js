@@ -11,11 +11,12 @@ export default ({
   author,
   para,
   labelimgurl,
-  customAfterStyle
+  customAfterStyle,
+  resourceurl
 }) => (
   <Box
     as="a"
-    href="#"
+    href={resourceurl ? resourceurl : '#'}
     sx={{
       width: ['350px', '350px'],
       display: 'inline-block',
@@ -59,7 +60,7 @@ export default ({
     ></CardTemplate>
     <h1
       sx={{
-        mb: [0],
+        mb: [1],
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',

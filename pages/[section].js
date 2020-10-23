@@ -10,7 +10,7 @@ export default ({ sections }) => (
 
 export const getStaticPaths = () => {
   const { getJSONData } = require('../lib/utility/index')
-  const {paths} = getJSONData('sectionslugs')
+  const { paths } = getJSONData('sectionslugs')
   return { paths, fallback: false }
 }
 
@@ -19,7 +19,3 @@ export const getStaticProps = async () => {
   const sections = await getSectionData('articles')
   return { props: { sections } }
 }
-
-
-
-

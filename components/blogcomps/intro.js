@@ -17,8 +17,16 @@ export default ({ heading, posterimgurl, author, date }) => (
       >
         {heading}
       </Text>
-      <Authorcomp author={author} isInBlog={true} date={date?date:undefined} />
-      <img sx={{ maxWidth: '100%', mt: [4] }} src={posterimgurl} alt="blog poster" />
+      <Authorcomp
+        author={author}
+        isInBlog={true}
+        date={date ? date : undefined}
+      />
+      <img
+        sx={{ maxWidth: '100%', mt: [4] }}
+        src={posterimgurl}
+        alt="blog poster"
+      />
     </Box>
   </>
 )

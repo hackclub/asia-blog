@@ -10,8 +10,13 @@ export default () => (
     </Text>{' '}
     <Grid columns={[2, 2, 3, 4]} sx={{ pt: [3, 4] }}>
       {_.map(
-        (ele,index) => (
-          <ContentElement key={index} text={ele.text} bg={ele.bg} background={ele.bggrad} />
+        (ele, index) => (
+          <ContentElement
+            key={index}
+            text={ele.text}
+            bg={ele.bg}
+            background={ele.bggrad}
+          />
         ),
         arr
       )}
@@ -22,7 +27,9 @@ export default () => (
 const ContentElement = ({ text, bg }) => (
   <Flex
     as="a"
-    href={text ? `/${_.pipe(_.replace('#',''),_.trim,_.toLower)(text)}` : "#"}
+    href={
+      text ? `/${_.pipe(_.replace('#', ''), _.trim, _.toLower)(text)}` : '#'
+    }
     target="blank"
     sx={{
       textDecoration: 'none',

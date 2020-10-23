@@ -78,14 +78,14 @@ const data = [
     imgurl: 'img/workshops/automation.png',
     title: 'Twitter Automation',
     para: 'Automate almost everything about your twitter account!',
-    url:'https://workshops.hackclub.com/selenium/'
+    url: 'https://workshops.hackclub.com/selenium/'
   },
   {
     rotate: '-1deg',
     imgurl: 'img/workshops/dicegame.png',
     title: 'Dice game App',
     para: 'Make a dice game app in react native! And make it awesome',
-    url:'https://workshops.hackclub.com/dicegamereactnative/'
+    url: 'https://workshops.hackclub.com/dicegamereactnative/'
   },
   {
     rotate: '2deg',

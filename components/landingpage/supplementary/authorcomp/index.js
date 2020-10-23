@@ -2,7 +2,7 @@
 import { jsx, Flex, Text } from 'theme-ui'
 import getProfile from '../../../../lib/data/author/index'
 
-export default ({ author, isInBlog = false, date}) => (
+export default ({ author, isInBlog = false, date }) => (
   <Flex sx={{ alignItems: 'center' }}>
     <img
       src={`${getProfile(author)}`}
@@ -12,10 +12,10 @@ export default ({ author, isInBlog = false, date}) => (
       sx={{
         pl: isInBlog ? [2] : [3],
         fontSize: isInBlog ? [1] : [2],
-        ':hover': { textDecorationLine:isInBlog?'none': 'underline' }
+        ':hover': { textDecorationLine: isInBlog ? 'none' : 'underline' }
       }}
     >
-      - {isInBlog ? date ? `${date},` :'' : ''} {author}
+      - {isInBlog ? (date ? `${date},` : '') : ''} {author}
     </Text>
   </Flex>
 )

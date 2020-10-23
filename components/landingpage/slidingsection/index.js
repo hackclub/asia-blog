@@ -15,7 +15,8 @@ import {
   getimgurl,
   getpara,
   getauthor,
-  getstyles
+  getstyles,
+  getresourceurl
 } from './utility/index'
 
 export default ({ data, mt, isBlog = false }) => (
@@ -47,9 +48,10 @@ export default ({ data, mt, isBlog = false }) => (
           <Card
             index={index}
             posterurl={isBlog ? `../../${data.posterurl}` : data.posterurl}
-            title={getdata(data)}
+            title={gettitle(data)}
             author={getauthor(data)}
             para={getpara(data)}
+            resourceurl={ getresourceurl(data)?getresourceurl(data): undefined } 
             labelimgurl={
               isBlog
                 ? `../../${pipe(getlabel, getLabelData, getimgurl)(data)}`

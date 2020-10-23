@@ -8,7 +8,7 @@
     "build": "yarn run blog_init && next build",
     "start": "next start",
     "blog_init": "node lib/utility/scripts/blogsections_init.js",
-    "section_init":"node lib/utility/scripts/sections_slug_init.js",
+    "section_init": "node lib/utility/scripts/sections_slug_init.js",
     "format": "yarn prettier --write ."
   },
   "dependencies": {

@@ -3,6 +3,7 @@ import { jsx, Grid, Box, Flex, Text } from 'theme-ui'
 import Header from './header/index'
 import Card from './card/index'
 import Footer from '../footer/index'
+
 export default ({ title, data }) => (
   <>
     <Header title={title} />
@@ -55,4 +56,9 @@ export default ({ title, data }) => (
     <Footer />
   </>
 )
-/** name, author, para, authorImgUrl, posterurl  */
+
+
+
+
+
+

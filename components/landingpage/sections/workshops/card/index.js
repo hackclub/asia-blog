@@ -6,7 +6,7 @@ import { isVisibleAtMin } from './utility/index'
 export default ({ rotate, imgurl, title, para, index, url }) => (
   <Box
     as="a"
-    href={url?url:'#'}
+    href={url ? url : '#'}
     target="blank"
     sx={{
       //    width: [250],

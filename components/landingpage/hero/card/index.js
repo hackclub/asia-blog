@@ -6,7 +6,7 @@ import getLabelData from '../../../../lib/data/labels/index'
 export default () => (
   <CustomBox
     as="a"
-    href="#"
+    href="./hq/hackboxbeta"
     sx={{
       display: ['block'],
       textDecorationLine: 'none',
@@ -32,8 +32,6 @@ export default () => (
   >
     <Box
       sx={{
-        //   display: 'inline-block',
-        // maxWidth: [500],
         pl: [3, 3, 5],
         pt: [2],
         width: '100%'
@@ -41,7 +39,6 @@ export default () => (
     >
       <h1
         sx={{
-          // display: 'inline-block',
           mb: [0],
           fontSize: [4, '42px', 5],
           lineHeight: '100%',
@@ -49,6 +46,7 @@ export default () => (
             textDecorationLine: 'underline'
           }
         }}
+        onClick={()=>{window.open('./hq/hackboxbeta',"_self")}}
       >
         Hack Box Beta Release!
       </h1>

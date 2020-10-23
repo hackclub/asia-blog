@@ -50,9 +50,8 @@ export const getStaticProps = async ({ params }) => {
   const data = getData(section, slug)
   const content = getContent(section, slug)
 
- 
   data['authorimgurl'] = getAuthorImageUrl(data.author)
   data['posterimgurl'] = getPosterUrl(section, slug, true)
-  
+
   return { props: { section, slug, data, content } }
 }
