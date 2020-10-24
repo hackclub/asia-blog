@@ -1,6 +1,6 @@
 ---
-title: How riding a motorcyle can make you happier!
-para: Read this awesome blog from a professional motorcycle track racer. You will discover how riding a bike can make your happy!
+title: Organization first virtual hackathon by SOSC!
+para: Read this awesome blog to know about the first virtual hackathon by SOSC.
 author: Swasthik Shetty
 date: 11-10-2020
 posterimgurl: https://cloud-qdzxa8x43.vercel.app/0blog_cover.jpg

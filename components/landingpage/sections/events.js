@@ -1,4 +1,4 @@
 import SlidingSection from '../slidingsection/index'
-import data from '../../../lib/data/sections/events/index'
-
-export default () => <SlidingSection data={data} mt={true} />
+import sectiondata from '../../../lib/data/sections/events/index'
+import utility from './utility/index'
+export default ({data}) => <SlidingSection data={ utility( sectiondata, data )} mt={true} />

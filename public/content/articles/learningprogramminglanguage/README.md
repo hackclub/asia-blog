@@ -1,6 +1,6 @@
 ---
 title: How to learn a programming language/framework!
-para: This article will answer the question that has troubled developers for time immemorial which is “How do I learn a programming language ?”. In this article, I will lay down some general tips and tricks which can definitely help you in your programming journey.
+para: Read this article to know how to learn a programming language/framework!
 author: Harsh Bajpai
 date: 20-10-2020
 posterimgurl: https://cloud-lequbqp4j.vercel.app/0programming-language-popularity.jpg

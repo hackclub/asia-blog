@@ -8,14 +8,14 @@ import Workshops from '../components/landingpage/sections/workshops/index'
 import Category from '../components/landingpage/sections/category/index'
 import AMAs from '../components/landingpage/sections/ama'
 
-export default function Home({ hq, articles}) {
+export default function Home({ hq, articles, events }) {
   return (
     <>
       <Header shouldBeTransparent={true} />
       <Hero />
       <Hq data={hq} />
       <Articles data={articles} />
-      <Events />
+      <Events data={events} />
       <Workshops />
       <Category />
       <AMAs />
@@ -28,5 +28,6 @@ export const getStaticProps = async () => {
   const {getSectionData } = require('../lib/utility/index')
   const hq = getSectionData('hq')
   const articles = getSectionData('articles')
-  return { props: { hq, articles, clubs: null } }
+  const events = getSectionData('events')
+  return { props: { hq, articles, events, clubs: null } }
 }

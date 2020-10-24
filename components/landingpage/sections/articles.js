@@ -1,4 +1,5 @@
 import VerticalSection from '../verticalsection/index'
-import data from '../../../lib/data/sections/recents/index'
+import sectiondata from '../../../lib/data/sections/recents/index'
+import utility from './utility/index'
 
-export default () => <VerticalSection data={data} />
+export default ({data}) => <VerticalSection data={utility(sectiondata,data)} />
