@@ -2,30 +2,35 @@ import * as _ from 'ramda'
 
 const push = _.curry((acc, ele) => _.concat(acc, [ele]))
 
-const search = _.curry(
-    (filename,data) => _.innerJoin((dataobj,filename) => _.prop('filename')(dataobj) == filename,data,[filename])
+const search = _.curry((propname, prop, data) =>
+  _.innerJoin((dataobj, prop) => _.prop(propname)(dataobj) == prop, data, [
+    prop
+  ])
 )
 
-const reduceFunction = _.curry( ( data, acc, sectiondataobj ) => {
-  
-      const objarr = search(_.prop('filename')(sectiondataobj), data)  
-      const mergeobj = _.mergeDeepRight(sectiondataobj, _.isEmpty(objarr) ?{} : objarr[0])
-      return push(acc)(mergeobj)
-     }
+const doesUrlExist = _.has('url')
 
-)
-
-const createUrl = (sectioname, filename) => { 
-
+const setUrl = (sectiondataobj, sectioname) => {
+  const urllens = _.lensProp('url')
+  const filename = _.prop('filename')(sectiondataobj)
+  const obj = doesUrlExist(sectiondataobj)
+    ? sectiondataobj
+    : _.set(urllens, `./${sectioname}/${filename}`, sectiondataobj)
+  return obj
 }
 
-const doesUrlExist = ( obj ) => {
+const reduceFunction = _.curry((sectionname, data, acc, sectiondataobj) => {
+  const objarr = search('filename')(_.prop('filename')(sectiondataobj))(data)
+  const mergeobj = _.mergeDeepRight(
+    setUrl(sectiondataobj, sectionname),
+    _.isEmpty(objarr) ? {} : objarr[0]
+  )
+  return push(acc)(mergeobj)
+})
 
- }
-
-
-export default (sectiondata, data, sectioname ) => {
-  const result =   _.reduce(reduceFunction(data))([])(sectiondata.data)
-  return _.mergeDeepRight(sectiondata,{data:result}) 
+export default (sectiondata, data, sectionname) => {
+  const result = _.reduce(reduceFunction(sectionname)(data))([])(
+    _.prop('data')(sectiondata)
+  )
+  return _.mergeDeepRight(sectiondata, { data: result })
 }
- 

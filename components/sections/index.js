@@ -56,9 +56,3 @@ export default ({ title, data }) => (
     <Footer />
   </>
 )
-
-
-
-
-
-

@@ -46,7 +46,9 @@ export default () => (
             textDecorationLine: 'underline'
           }
         }}
-        onClick={()=>{window.open('./hq/hackboxbeta',"_self")}}
+        onClick={() => {
+          window.open('./hq/hackboxbeta', '_self')
+        }}
       >
         Hack Box Beta Release!
       </h1>

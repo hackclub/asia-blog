@@ -16,7 +16,7 @@ import {
   getpara,
   getauthor,
   getstyles,
-  getresourceurl
+  geturl
 } from './utility/index'
 
 export default ({ data, mt, isBlog = false }) => (
@@ -51,7 +51,7 @@ export default ({ data, mt, isBlog = false }) => (
             title={gettitle(data)}
             author={getauthor(data)}
             para={getpara(data)}
-            resourceurl={ getresourceurl(data)?getresourceurl(data): undefined } 
+            url={geturl(data) ? geturl(data) : undefined}
             labelimgurl={
               isBlog
                 ? `../../${pipe(getlabel, getLabelData, getimgurl)(data)}`

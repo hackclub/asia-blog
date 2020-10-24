@@ -12,11 +12,11 @@ export default ({
   para,
   labelimgurl,
   customAfterStyle,
-  resourceurl
+  url
 }) => (
   <Box
     as="a"
-    href={resourceurl ? resourceurl : '#'}
+    href={url ? url : '#'}
     sx={{
       width: ['350px', '350px'],
       display: 'inline-block',

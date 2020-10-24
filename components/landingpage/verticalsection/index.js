@@ -26,7 +26,7 @@ export default ({ data }) => (
       backgroundSize: ['800px', '800px', 'default,800px', 'default,800px']
     }}
   >
-     <Sectionintro
+    <Sectionintro
       title={data.title}
       className={data.className}
       isSlidingSection={data.isSlidingSection}

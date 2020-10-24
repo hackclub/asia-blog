@@ -30,7 +30,7 @@ export default ({
             display: 'block',
             fontWeight: 'bold',
             fontSize: ['2em'],
-            mb: [0,1],
+            mb: [0, 1],
             lineHeight: 'heading',
             whiteSpace: 'nowrap',
             overflow: 'hidden',

@@ -24,8 +24,8 @@ export default function Home({ hq, articles, events }) {
   )
 }
 
-export const getStaticProps = async () => { 
-  const {getSectionData } = require('../lib/utility/index')
+export const getStaticProps = async () => {
+  const { getSectionData } = require('../lib/utility/index')
   const hq = getSectionData('hq')
   const articles = getSectionData('articles')
   const events = getSectionData('events')
