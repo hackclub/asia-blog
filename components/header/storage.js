@@ -1,3 +1,5 @@
+/***This files shows an alternate version of the header */
+
 /**@jsx jsx*/
 import { jsx } from 'theme-ui'
 import { useState, useEffect } from 'react'

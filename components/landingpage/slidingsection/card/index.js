@@ -18,15 +18,16 @@ export default ({
     as="a"
     href={url ? url : '#'}
     sx={{
-      width: ['350px', '350px'],
+      width: ['350px'],
       display: 'inline-block',
-      ml: index == 0 ? null : [3],
+      ml: index == 0 ? 0 : [3],
       mr: [3],
       whiteSpace: 'normal',
       color: 'text',
       textDecoration: 'none'
     }}
   >
+    {console.log('index is', index)}
     <CardTemplate
       sx={{
         width: '100%',

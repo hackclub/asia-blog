@@ -49,7 +49,7 @@ export default withResizeDetector(
             : 'white',
           display: 'fixed',
           zIndex: 5000,
-          minHeight: '60px', //70px
+          minHeight: '60px',
           opacity: '0.97',
           position: 'fixed',
           borderBottom: shouldBeTransparent
@@ -105,7 +105,7 @@ export default withResizeDetector(
               }
             }}
           >
-            <Nav data={data} />
+            <Nav data={data} isHomePage={isHomePage} />
             <span
               onClick={() => {
                 setscroll(!scroll)
@@ -151,7 +151,7 @@ export default withResizeDetector(
 )
 
 const Customh3 = styled.h3``
-const Nav = ({ data }) => (
+const Nav = ({ data, isHomePage }) => (
   <>
     {_.map(
       ele => (
@@ -165,11 +165,10 @@ const Nav = ({ data }) => (
 )
 
 const data = [
-  { text: 'Home', url: './' },
-  { text: 'Blog', url: './' },
-  { text: 'Join', url: 'https://github.com/hackclub/hackstore' },
-  { text: 'Team', url: './team' },
-  { text: 'FAQs', url: './team' }
+  { text: 'Home', url: '../../' },
+  { text: 'Join', url: 'https://apply.hackclub.com/' },
+  { text: 'Team', url: 'https://india.hackclub.com/team' },
+  { text: 'Branding', url: 'https://hackclub.com/brand/' }
 ]
 
 const Overlay = ({ display }) => (
@@ -185,11 +184,10 @@ const Overlay = ({ display }) => (
       flexDirection: 'column'
     }}
   >
-    <OverlayItem Text={'Home'} url="./" />
-    <OverlayItem Text={'Blog'} url="./" />
-    <OverlayItem Text={'Join'} url="./team" />
-    <OverlayItem Text={'Team'} url="./team" />
-    <OverlayItem Text={'FAQs'} url="./team" />
+    <OverlayItem Text={'Home'} url="../../" />
+    <OverlayItem Text={'Join'} url="https://apply.hackclub.com/" />
+    <OverlayItem Text={'Team'} url="https://india.hackclub.com/team" />
+    <OverlayItem Text={'Branding'} url="https://hackclub.com/brand/" />
   </div>
 )
 

@@ -6,12 +6,14 @@ import Footer from '../../components/footer/index'
 import Intro from '../../components/blogcomps/intro'
 import getAuthorImageUrl from '../../lib/data/author/index'
 import Suggestions from '../../components/blogcomps/suggestions'
+import Meta from '../../components/meta/index'
 import _ from 'ramda'
 
 export default ({ section, slug, data, content }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
+      <Meta title={data.title} />
       <Header isHomePage={false} section="articles" />
       <Container variant="copy" as="main">
         <Intro

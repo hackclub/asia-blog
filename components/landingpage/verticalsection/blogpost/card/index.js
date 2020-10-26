@@ -2,10 +2,10 @@
 import { jsx, Box } from 'theme-ui'
 import CardTemplate from '../../../supplementary/cardtemplate/index'
 
-export default ({ posterurl, labelurl, labelStyles }) => (
+export default ({ posterurl, labelurl, labelStyles, url }) => (
   <CardTemplate
     as="a"
-    href="#"
+    href={url ? url : '#'}
     sx={{
       display: 'inline-block',
       height: [300, 350],

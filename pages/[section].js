@@ -1,10 +1,13 @@
-import Head from 'next/head'
+import Meta from '../components/meta/index'
 import SectionTemplate from '../components/sections/index'
+import Header from '../components/header/index'
+import Head from 'next/head'
 
-export default ({ sections }) => (
+export default ({ sectiondata, section }) => (
   <>
-    {console.log(sections)}
-    <SectionTemplate data={sections} title={'Recent Articles'} />
+    <Header />
+    <Meta title={section} />
+    <SectionTemplate data={sectiondata} />
   </>
 )
 
@@ -14,8 +17,9 @@ export const getStaticPaths = () => {
   return { paths, fallback: false }
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ params }) => {
   const { getSectionData } = require('../lib/utility/index')
-  const sections = await getSectionData('articles')
-  return { props: { sections } }
+  const { section } = params
+  const sectiondata = await getSectionData(section)
+  return { props: { sectiondata, section } }
 }

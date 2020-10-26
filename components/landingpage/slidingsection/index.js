@@ -1,9 +1,10 @@
 /***@jsx jsx*/
-import { jsx, Grid } from 'theme-ui'
+import { jsx } from 'theme-ui'
+import Grid from './grid'
 import Card from './card/index'
 import getLabelData from '../../../lib/data/labels/index'
 import Sectionintro from '../sectionintro/index'
-import { map, pipe } from 'ramda'
+import * as _ from 'ramda'
 
 import {
   getdata,
@@ -35,7 +36,7 @@ export default ({ data, mt, isBlog = false }) => (
       para={getpara(data)}
     />
     <Grid
-      columns={pipe(getdata, getlength)(data)}
+      columns={_.pipe(getdata, getlength)(data)}
       className={getclassName(data)}
       sx={{
         pt: [4],
@@ -43,7 +44,7 @@ export default ({ data, mt, isBlog = false }) => (
         whiteSpace: 'nowrap'
       }}
     >
-      {map(
+      {_.addIndex(_.map)(
         (data, index) => (
           <Card
             index={index}
@@ -54,10 +55,10 @@ export default ({ data, mt, isBlog = false }) => (
             url={geturl(data) ? geturl(data) : undefined}
             labelimgurl={
               isBlog
-                ? `../../${pipe(getlabel, getLabelData, getimgurl)(data)}`
-                : pipe(getlabel, getLabelData, getimgurl)(data)
+                ? `../../${_.pipe(getlabel, getLabelData, getimgurl)(data)}`
+                : _.pipe(getlabel, getLabelData, getimgurl)(data)
             }
-            customAfterStyle={pipe(getlabel, getLabelData, getstyles)(data)}
+            customAfterStyle={_.pipe(getlabel, getLabelData, getstyles)(data)}
           />
         ),
         getdata(data)

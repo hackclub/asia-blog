@@ -53,7 +53,7 @@ export default () => (
           justifyContent: 'center'
         }}
       >
-        {_.map(
+        {_.addIndex(_.map)(
           (item, index) => (
             <Card
               index={index}

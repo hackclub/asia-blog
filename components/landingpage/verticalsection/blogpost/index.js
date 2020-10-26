@@ -11,7 +11,8 @@ export default ({
   author,
   para,
   labelurl,
-  labelStyles
+  labelStyles,
+  url
 }) => (
   <Grid
     columns={[1, 1, 1, 2]}
@@ -20,7 +21,12 @@ export default ({
       px: [0, 0, 5]
     }}
   >
-    <Card posterurl={posterurl} labelurl={labelurl} labelStyles={labelStyles} />
+    <Card
+      url={url}
+      posterurl={posterurl}
+      labelurl={labelurl}
+      labelStyles={labelStyles}
+    />
     <Box sx={{ px: [0, 0, 0, 4], mt: [3, 3, 3, 0], alignSelf: 'center' }}>
       <Box>
         <Customh1
@@ -30,7 +36,7 @@ export default ({
             display: 'block',
             fontWeight: 'bold',
             fontSize: ['2em'],
-            mb: [0, 1],
+            mb: [0, 2],
             lineHeight: 'heading',
             whiteSpace: 'nowrap',
             overflow: 'hidden',

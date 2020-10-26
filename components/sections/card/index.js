@@ -19,7 +19,7 @@ export default ({
     sx={{
       // width: ['350px', '350px'],
       display: 'inline-block',
-      ml: index == 0 ? null : [3],
+      ml: [0, 0, index % 2 == 0, index % 3 == 0 ? null : [3]],
       mr: [3],
       whiteSpace: 'normal',
       color: 'text',

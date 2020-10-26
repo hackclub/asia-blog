@@ -1,12 +1,10 @@
 /**@jsx jsx*/
 import { jsx, Grid, Box, Flex, Text } from 'theme-ui'
-import Header from './header/index'
 import Card from './card/index'
 import Footer from '../footer/index'
 
 export default ({ title, data }) => (
   <>
-    <Header title={title} />
     <Box
       sx={{
         pl: [4, 5],

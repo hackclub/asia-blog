@@ -5,7 +5,10 @@ import { ArrowLeft } from 'react-feather'
 
 export default ({ section }) => (
   <Flex
+    as="a"
+    href="./"
     sx={{
+      textDecorationLine: 'none',
       alignItems: 'center',
       position: 'absolute',
       ml: [2, 3, 2, 5],

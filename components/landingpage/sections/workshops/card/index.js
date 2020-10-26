@@ -1,6 +1,6 @@
 /**@jsx jsx*/
 
-import { jsx, Flex, Box, Text } from 'theme-ui'
+import { jsx, Box, Text } from 'theme-ui'
 import { isVisibleAtMin } from './utility/index'
 
 export default ({ rotate, imgurl, title, para, index, url }) => (
@@ -9,7 +9,6 @@ export default ({ rotate, imgurl, title, para, index, url }) => (
     href={url ? url : '#'}
     target="blank"
     sx={{
-      //    width: [250],
       display: isVisibleAtMin(index)
         ? null
         : ['none', 'none', 'none', 'initial'],

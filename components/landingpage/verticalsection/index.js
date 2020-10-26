@@ -42,9 +42,8 @@ export default ({ data }) => (
         para={element.para}
         labelurl={getLabelData(element.label).imgurl}
         labelStyles={getLabelData(element.label).styles}
+        url={element.url}
       />
     ))}
   </div>
 )
-
-const arr = [1, 2, 3]
