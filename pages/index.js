@@ -7,11 +7,13 @@ import Events from '../components/landingpage/sections/events'
 import Workshops from '../components/landingpage/sections/workshops/index'
 import Category from '../components/landingpage/sections/category/index'
 import AMAs from '../components/landingpage/sections/ama'
+import Meta from '../components/meta/index'
 
 export default function Home({ hq, articles, events }) {
   return (
     <>
       <Header shouldBeTransparent={true} />
+      <Meta title={"Blog-Hack Club India"} />
       <Hero />
       <Hq data={hq} />
       <Articles data={articles} />
