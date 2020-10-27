@@ -19,7 +19,6 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
         <h1
           sx={{
             fontSize: [4, '40px'],
-            // mr: [1, 5],
             pb: [2],
             mb: [0]
           }}
@@ -30,8 +29,9 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
           sx={{
             flex: 1,
             flexDirection: 'row-reverse',
-            alignItems: 'end',
-            mb: [3],
+            alignItems: 'center',
+            mt:[3],
+            // mb: [3],
             display: isSlidingSection ? ['none', 'none', 'flex'] : 'none'
           }}
         >

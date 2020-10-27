@@ -16,7 +16,7 @@ import * as _ from 'ramda'
 export default withResizeDetector(
   ({ width, shouldBeTransparent, isHomePage = true, section = '' }) => {
     const [scroll, setscroll] = useState(false)
-    const [isVisible,setvisibility] = useState(true)
+    const [isVisible, setvisibility] = useState(true)
     const [transparent, setTransparency] = useState(true)
 
     resizeHandlerUtility(
@@ -110,23 +110,29 @@ export default withResizeDetector(
             <span
               onClick={() => {
                 setscroll(!scroll)
-                !shouldBeTransparent? setvisibility(!isVisible): null
+                !shouldBeTransparent ? setvisibility(!isVisible) : null
               }}
               sx={{ position: 'absolute', zIndex: 2000 }}
             >
               <Icon
                 sx={{
                   mr: [3],
-                  display: shouldBeTransparent? [
-                    scroll ? 'none' : 'initial',
-                    scroll ? 'none' : 'initial',
-                    'none'
-                  ] : isVisible?['initial','initial','none']:'none',
-                  fill: shouldBeTransparent? isHomePage
-                    ? transparent
-                      ? 'white'
+                  display: shouldBeTransparent
+                    ? [
+                        scroll ? 'none' : 'initial',
+                        scroll ? 'none' : 'initial',
+                        'none'
+                      ]
+                    : isVisible
+                    ? ['initial', 'initial', 'none']
+                    : 'none',
+                  fill: shouldBeTransparent
+                    ? isHomePage
+                      ? transparent
+                        ? 'white'
+                        : '#3c4858'
                       : '#3c4858'
-                    : '#3c4858': '#3c4858'
+                    : '#3c4858'
                 }}
                 glyph="menu"
                 size={['40px']}
@@ -134,12 +140,16 @@ export default withResizeDetector(
               <Icon
                 sx={{
                   mr: [3],
-                  display:
-                  shouldBeTransparent?  [
-                    !scroll ? 'none' : 'initial',
-                    !scroll ? 'none' : 'initial',
-                    'none'
-                  ]:!isVisible?['initial','initial','none']:'none',
+
+                  display: shouldBeTransparent
+                    ? [
+                        !scroll ? 'none' : 'initial',
+                        !scroll ? 'none' : 'initial',
+                        'none'
+                      ]
+                    : !isVisible
+                    ? ['initial', 'initial', 'none']
+                    : 'none'
                 }}
                 size={['40px']}
                 glyph="view-close"

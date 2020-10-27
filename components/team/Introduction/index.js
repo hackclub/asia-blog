@@ -8,7 +8,6 @@ export default () => (
       width: ['100%'],
       background: `linear-gradient(131.52deg, #FFB443 25.03%, #F99705 100%)`,
       py: ['7em', '7em']
-      
     }}
   >
     <div
