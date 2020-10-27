@@ -29,6 +29,7 @@ export default ({ title, author, description, posterimgurl }) =>
 
     />
     
+    <title>{title}</title> 
     <meta property="og:image" content={posterimgurl} /> 
     
   </Head>

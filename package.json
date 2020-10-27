@@ -9,7 +9,8 @@
     "start": "next start",
     "blog_init": "node lib/utility/scripts/blogsections_init.js",
     "section_init": "node lib/utility/scripts/sections_slug_init.js",
-    "format": "yarn prettier --write ."
+    "format": "yarn prettier --write .",
+    "publish": "yarn run format && git push -u origin"
   },
   "dependencies": {
     "@bajpai244/datetime": "^1.1.0",
