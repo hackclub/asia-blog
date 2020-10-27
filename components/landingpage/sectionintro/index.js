@@ -30,8 +30,7 @@ export default ({ title, className, isSlidingSection, para, imgurl }) => {
             flex: 1,
             flexDirection: 'row-reverse',
             alignItems: 'center',
-            mt:[3],
-            // mb: [3],
+            mt: [3],
             display: isSlidingSection ? ['none', 'none', 'flex'] : 'none'
           }}
         >
