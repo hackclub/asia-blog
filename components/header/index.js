@@ -16,6 +16,7 @@ import * as _ from 'ramda'
 export default withResizeDetector(
   ({ width, shouldBeTransparent, isHomePage = true, section = '' }) => {
     const [scroll, setscroll] = useState(false)
+    const [isVisible,setvisibility] = useState(true)
     const [transparent, setTransparency] = useState(true)
 
     resizeHandlerUtility(
@@ -109,23 +110,23 @@ export default withResizeDetector(
             <span
               onClick={() => {
                 setscroll(!scroll)
-                console.log(width)
+                !shouldBeTransparent? setvisibility(!isVisible): null
               }}
               sx={{ position: 'absolute', zIndex: 2000 }}
             >
               <Icon
                 sx={{
                   mr: [3],
-                  display: [
+                  display: shouldBeTransparent? [
                     scroll ? 'none' : 'initial',
                     scroll ? 'none' : 'initial',
                     'none'
-                  ],
-                  fill: isHomePage
+                  ] : isVisible?['initial','initial','none']:'none',
+                  fill: shouldBeTransparent? isHomePage
                     ? transparent
                       ? 'white'
-                      : 'initial'
-                    : 'initial'
+                      : '#3c4858'
+                    : '#3c4858': '#3c4858'
                 }}
                 glyph="menu"
                 size={['40px']}
@@ -133,11 +134,12 @@ export default withResizeDetector(
               <Icon
                 sx={{
                   mr: [3],
-                  display: [
+                  display:
+                  shouldBeTransparent?  [
                     !scroll ? 'none' : 'initial',
                     !scroll ? 'none' : 'initial',
                     'none'
-                  ]
+                  ]:!isVisible?['initial','initial','none']:'none',
                 }}
                 size={['40px']}
                 glyph="view-close"
@@ -165,9 +167,9 @@ const Nav = ({ data, isHomePage }) => (
 )
 
 const data = [
-  { text: 'Home', url: '../../' },
+  { text: 'Home', url: '../../../' },
   { text: 'Join', url: 'https://apply.hackclub.com/' },
-  { text: 'Team', url: 'https://india.hackclub.com/team' },
+  { text: 'Team', url: '../../../team' },
   { text: 'Branding', url: 'https://hackclub.com/brand/' }
 ]
 
@@ -186,7 +188,7 @@ const Overlay = ({ display }) => (
   >
     <OverlayItem Text={'Home'} url="../../" />
     <OverlayItem Text={'Join'} url="https://apply.hackclub.com/" />
-    <OverlayItem Text={'Team'} url="https://india.hackclub.com/team" />
+    <OverlayItem Text={'Team'} url="../../../team" />
     <OverlayItem Text={'Branding'} url="https://hackclub.com/brand/" />
   </div>
 )
