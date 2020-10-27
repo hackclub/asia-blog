@@ -13,7 +13,13 @@ export default ({ section, slug, data, content }) => {
   if (!slug || !data) return <Error statusCode={404} />
   return (
     <>
-      <Meta title={data.title} />
+      <Meta
+        isArticle={true}
+        author={data.author}
+        date={data.date}
+        description={data.para}
+        posterimgurl={data.posterimgurl}
+         title={_.prop('title')(data)} />
       <Header isHomePage={false} section="articles" />
       <Container variant="copy" as="main">
         <Intro
