@@ -1,16 +1,9 @@
 import Head from 'next/head'
-export default ({ title, author, description, posterimgurl }) =>    
-<Head>
-   
-    <meta
-      name="description"
-      content={description}
-    />
+export default ({ title, author, description, posterimgurl }) => (
+  <Head>
+    <meta name="description" content={description} />
 
-   <meta
-      name="title"
-      content={title}
-    />
+    <meta name="title" content={title} />
 
     <meta
       name="keywords"
@@ -21,15 +14,10 @@ export default ({ title, author, description, posterimgurl }) =>
     <meta property="og:title" content={title} />
     <meta property="og:type" content="article" />
     <meta property="og:article:author" content={author} />
-   
 
-    <meta
-      property="og:description"
-      content={description}
+    <meta property="og:description" content={description} />
 
-    />
-    
-    <title>{title}</title> 
-    <meta property="og:image" content={posterimgurl} /> 
-    
+    <title>{title}</title>
+    <meta property="og:image" content={posterimgurl} />
   </Head>
+)

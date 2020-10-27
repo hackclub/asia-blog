@@ -13,7 +13,7 @@ export default function Home({ hq, articles, events }) {
   return (
     <>
       <Header shouldBeTransparent={true} />
-      <Meta title={"Blog-Hack Club India"} />
+      <Meta title={'Blog-Hack Club India'} />
       <Hero />
       <Hq data={hq} />
       <Articles data={articles} />

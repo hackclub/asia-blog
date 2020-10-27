@@ -3,7 +3,7 @@ import { jsx, Grid, Box, Flex, Text } from 'theme-ui'
 import Card from './card/index'
 import Footer from '../footer/index'
 
-export default ({title,desc, data }) => (
+export default ({ title, desc, data }) => (
   <>
     <Box
       sx={{
@@ -36,9 +36,7 @@ export default ({title,desc, data }) => (
           {title}
         </h1>
       </Flex>
-      <Text sx={{ fontSize: [2, 3], mt: [2], ml: [1] }}>
-        {desc}
-      </Text>
+      <Text sx={{ fontSize: [2, 3], mt: [2], ml: [1] }}>{desc}</Text>
       <Grid columns={[1, 1, 2, 3]} sx={{ mt: [4] }}>
         {data.map((item, index) => (
           <Card

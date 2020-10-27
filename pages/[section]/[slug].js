@@ -19,7 +19,8 @@ export default ({ section, slug, data, content }) => {
         date={data.date}
         description={data.description}
         posterimgurl={data.posterimgurl}
-         title={_.prop('title')(data)} />
+        title={_.prop('title')(data)}
+      />
       <Header isHomePage={false} section="articles" />
       <Container variant="copy" as="main">
         <Intro
