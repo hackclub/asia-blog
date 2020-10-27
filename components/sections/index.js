@@ -3,7 +3,7 @@ import { jsx, Grid, Box, Flex, Text } from 'theme-ui'
 import Card from './card/index'
 import Footer from '../footer/index'
 
-export default ({ title, desc, data,sectionname }) => (
+export default ({ title, desc, data, sectionname }) => (
   <>
     <Box
       sx={{

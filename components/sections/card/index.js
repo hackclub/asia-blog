@@ -17,7 +17,7 @@ export default ({
 }) => (
   <Box
     as="a"
-      href={filename?`./${sectionname}/${filename}`:"#"}
+    href={filename ? `./${sectionname}/${filename}` : '#'}
     sx={{
       display: 'inline-block',
       ml: [0, 0, index % 2 == 0, index % 3 == 0 ? null : [3]],

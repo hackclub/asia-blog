@@ -1,6 +1,6 @@
 ---
 title: Hack Club India Introduction
-para: This blog is going to share my journey at Hack Club India, I will also share my thoughts about the community!.
+para: This blog is going to share my journey at Hack Club India, I will also share my thoughts about the community!
 author: Thejaswi Prakash
 date: 27-10-2020
 posterimgurl: https://cloud-o111rexma.vercel.app/0hackclubindia.png

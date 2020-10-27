@@ -5,7 +5,7 @@ import Header from '../components/header/index'
 export default ({ sectiondata, metadata, section }) => (
   <>
     <Header />
-    <Meta isSection={true}  title={section} />
+    <Meta isSection={true} title={section} />
     <SectionTemplate
       sectionname={section}
       title={metadata.title}
