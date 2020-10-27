@@ -1,5 +1,6 @@
-export default ({title, author, description, posterimgurl}) =>    
-<>
+import Head from 'next/head'
+export default ({ title, author, description, posterimgurl }) =>    
+<Head>
    
     <meta
       name="description"
@@ -20,7 +21,9 @@ export default ({title, author, description, posterimgurl}) =>
     <meta
       property="og:description"
       content={description}
+
     />
+    
     <meta property="og:image" content={posterimgurl} /> 
     
-  </>
+  </Head>

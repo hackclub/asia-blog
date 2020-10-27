@@ -7,7 +7,7 @@ import Intro from '../../components/blogcomps/intro'
 import getAuthorImageUrl from '../../lib/data/author/index'
 import Suggestions from '../../components/blogcomps/suggestions'
 import Meta from '../../components/meta/index'
-import _ from 'ramda'
+import * as _ from 'ramda'
 
 export default ({ section, slug, data, content }) => {
   if (!slug || !data) return <Error statusCode={404} />
@@ -17,7 +17,7 @@ export default ({ section, slug, data, content }) => {
         isArticle={true}
         author={data.author}
         date={data.date}
-        description={data.para}
+        description={data.description}
         posterimgurl={data.posterimgurl}
          title={_.prop('title')(data)} />
       <Header isHomePage={false} section="articles" />

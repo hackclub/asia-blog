@@ -27,7 +27,6 @@ export default ({
       textDecoration: 'none'
     }}
   >
-    {console.log('index is', index)}
     <CardTemplate
       sx={{
         width: '100%',

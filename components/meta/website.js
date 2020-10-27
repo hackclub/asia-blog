@@ -1,6 +1,8 @@
+import Head from 'next/head'
 export default () =>    
-<> 
-    <meta
+<Head> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta
       name="description"
       content="Welcome to Hack Club India's blog, it is a place to share and explore ideas and stories and know what the Hack Club community is doing!"
     />
@@ -19,4 +21,4 @@ export default () =>
       content="Welcome to Hack Club India's blog, it is a place to share and explore ideas and stories and know what the Hack Club community is doing!"
     />
    <meta property="og:image" content="https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/poster.png" /> 
-</>
+</Head>
