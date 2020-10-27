@@ -1,6 +1,6 @@
 ---
-title: Let’s talk Summer of Making
-para: We talk with Sam Poder, a 15-year-old maker who was instrumental in the creation of the “Summer of Making” program in the Hack Club community.
+title: Let’s talk Summer Of Making
+para: We talk with Sam Poder about his experience with Summer Of Making.
 author: Harsh Bajpai
 date: 12-10-2020
 ---

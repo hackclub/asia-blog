@@ -4,7 +4,12 @@ export default ({ title, author, description, posterimgurl }) =>
    
     <meta
       name="description"
-      content="Welcome to Hack Club India's blog, it is a place to share and explore ideas and stories and know what the Hack Club community is doing!"
+      content={description}
+    />
+
+   <meta
+      name="title"
+      content={title}
     />
 
     <meta

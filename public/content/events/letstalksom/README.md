@@ -1,5 +1,5 @@
 ---
-title: Let’s talk Summer of Making
+title: Let’s talk Summer Of Making
 para: We talk with Sam Poder about his experience with Summer Of Making.
 author: Harsh Bajpai
 date: 12-10-2020
