@@ -9,15 +9,16 @@ export default ({
   posterurl,
   title,
   author,
+  sectionname,
+  filename,
   para,
   labelimgurl,
   customAfterStyle
 }) => (
   <Box
     as="a"
-    href="#"
+      href={filename?`./${sectionname}/${filename}`:"#"}
     sx={{
-      // width: ['350px', '350px'],
       display: 'inline-block',
       ml: [0, 0, index % 2 == 0, index % 3 == 0 ? null : [3]],
       mr: [3],

@@ -23,29 +23,29 @@ export default class App extends NextApp {
           <link
             key="safari_icon"
             rel="mask-icon"
-           href="https://assets.hackclub.com/favicons/safari-pinned-tab.svg"
-           color="#ec3750"
-    />
- <link
-      key="apple_icon"
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://assets.hackclub.com/favicons/apple-touch-icon.png"
-    />
-      <link
-      key="favicon_32"
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://assets.hackclub.com/favicons/favicon-32x32.png"
-    />
-      <link
-      key="favicon_16"
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://assets.hackclub.com/favicons/favicon-16x16.png"
-       />
+            href="https://assets.hackclub.com/favicons/safari-pinned-tab.svg"
+            color="#ec3750"
+          />
+          <link
+            key="apple_icon"
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="https://assets.hackclub.com/favicons/apple-touch-icon.png"
+          />
+          <link
+            key="favicon_32"
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="https://assets.hackclub.com/favicons/favicon-32x32.png"
+          />
+          <link
+            key="favicon_16"
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="https://assets.hackclub.com/favicons/favicon-16x16.png"
+          />
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

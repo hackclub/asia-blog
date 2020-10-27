@@ -1,13 +1,13 @@
 import Meta from '../components/meta/index'
 import SectionTemplate from '../components/sections/index'
 import Header from '../components/header/index'
-import Head from 'next/head'
 
 export default ({ sectiondata, metadata, section }) => (
   <>
     <Header />
-    <Meta isSection={true} title={section} />
+    <Meta isSection={true}  title={section} />
     <SectionTemplate
+      sectionname={section}
       title={metadata.title}
       desc={metadata.para}
       data={sectiondata}
