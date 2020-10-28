@@ -18,10 +18,10 @@ export default ({
     as="a"
     href={url ? url : '#'}
     sx={{
-      width: ['350px'],
+      width: ['300px','350px'],
       display: 'inline-block',
-      ml: index == 0 ? 0 : [3],
-      mr: [3],
+      ml: index == 0 ? 0 : [0,3],
+      mr: [0,3],
       whiteSpace: 'normal',
       color: 'text',
       textDecoration: 'none'
@@ -45,7 +45,7 @@ export default ({
           bottom: ['-1.5rem'],
           right: ['0rem'],
           transform: 'rotate(15deg)',
-
+          display:['none','initial'],
           /**The above are some default styles*/
 
           ...customAfterStyle,

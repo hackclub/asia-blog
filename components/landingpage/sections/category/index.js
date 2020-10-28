@@ -35,7 +35,7 @@ const ContentElement = ({ text, bg }) => (
       textDecoration: 'none',
       bg: bg ? bg : 'steel',
       color: 'white',
-      height: [150],
+      height: [100,150],
       borderRadius: [3, 5],
       justifyContent: 'center',
       alignItems: 'center',
