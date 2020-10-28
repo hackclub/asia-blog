@@ -26,7 +26,7 @@ export default ({ data, mt, isBlog = false }) => {
   const [isVisible, setvisibility] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isAtEnd, setIsAtEnd] = useState(false)
- 
+
   return (
     <div sx={{ pl: [4, 5], pr: [2, 2, 0], mt: mt ? [3] : [0] }}>
       <Sectionintro
@@ -42,7 +42,7 @@ export default ({ data, mt, isBlog = false }) => {
         }
         para={getpara(data)}
         isScrolledfromParent={isScrolled}
-         isAtEndfromParent={isAtEnd}
+        isAtEndfromParent={isAtEnd}
       />
       <Box
         onMouseEnter={() => {
@@ -53,9 +53,11 @@ export default ({ data, mt, isBlog = false }) => {
         }}
         sx={{ position: 'relative' }}
       >
-        <ScrollComp className={getclassName(data)} isVisible={isVisible}
-        setIsScrolled={setIsScrolled}
-        setIsAtEnd={setIsAtEnd}
+        <ScrollComp
+          className={getclassName(data)}
+          isVisible={isVisible}
+          setIsScrolled={setIsScrolled}
+          setIsAtEnd={setIsAtEnd}
         />
         <Grid
           columns={_.pipe(getdata, getlength)(data)}

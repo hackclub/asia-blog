@@ -3,28 +3,23 @@ import { jsx, Flex, Box } from 'theme-ui'
 import HackClubIcon from '@hackclub/icons'
 import ScrollingUtilityFunction from '../sectionintro/utility/index'
 
-export default ({ isVisible, className , setIsScrolled , setIsAtEnd }) => {
+export default ({ isVisible, className, setIsScrolled, setIsAtEnd }) => {
   const { scrollLeft, scrollRight } = ScrollingUtilityFunction(className)
 
-  
   const callback = glyph => {
-  
-  return () => {
-    const result = glyph === 'view-forward' ?  scrollLeft() : scrollRight()
-    setIsScrolled(result.isAtStart)
-    setIsAtEnd(result.isAtEnd)
+    return () => {
+      const result = glyph === 'view-forward' ? scrollLeft() : scrollRight()
+      setIsScrolled(result.isAtStart)
+      setIsAtEnd(result.isAtEnd)
     }
-}
+  }
 
   return (
     <Flex
-      
       sx={{
         position: 'absolute',
         alignItems: 'center',
-        display: [
-          'none','flex'
-        ],
+        display: ['none', 'flex'],
         width: '100%',
         height: '100%',
         zIndex: isVisible ? null : -1,
@@ -34,7 +29,6 @@ export default ({ isVisible, className , setIsScrolled , setIsAtEnd }) => {
     >
       <Icon isVisible={isVisible} callback={callback} glyph="view-back" />
       <Icon isVisible={isVisible} callback={callback} glyph="view-forward" />
-  
     </Flex>
   )
 }
@@ -60,10 +54,8 @@ const Icon = ({ glyph, isVisible, callback }) => (
         transition: '0.2s'
       }
     }}
-  
     onClick={callback(glyph)}
   >
     <HackClubIcon glyph={glyph} sx={{}} size={64} />
   </Flex>
 )
-
