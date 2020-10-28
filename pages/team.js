@@ -1,7 +1,7 @@
 /**@jsx jsx*/
 
 import { jsx, Grid } from 'theme-ui'
-import Header from '../components/Header/index'
+import Header from '../components/header/index'
 import Intro from '../components/team/Introduction/index'
 import Card from '../components/team/card'
 import Footer from '../components/footer/index'
