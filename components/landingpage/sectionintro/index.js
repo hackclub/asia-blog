@@ -3,9 +3,14 @@ import { jsx, Flex, Text } from 'theme-ui'
 import { useState } from 'react'
 import ScrollingUtilityFunction from './utility/index'
 
-export default ({ title, className, isSlidingSection, para, imgurl }) => {
+export default ({ title, className, isSlidingSection, para, imgurl, isScrolledfromParent, isAtEndfromParent }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isAtEnd, setIsAtEnd] = useState(false)
+
+  isScrolled!=isScrolledfromParent ? setIsScrolled( isScrolledfromParent):null
+  isAtEnd!=isAtEndfromParent ? setIsAtEnd( isAtEndfromParent ):null
+
+
   const { scrollLeft, scrollRight } = ScrollingUtilityFunction(className)
 
   return (
