@@ -36,7 +36,7 @@ export default ({
             display: 'block',
             fontWeight: 'bold',
             fontSize: ['2em'],
-            mb: [0, 2],
+            mb: [1, 2],
             lineHeight: 'heading',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
