@@ -64,14 +64,13 @@ export default ({
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-         fontSize:[3,4],   
-          ':hover': { textDecorationLine: 'underline' }
-        
-        }}
+        fontSize: [3, 4],
+        ':hover': { textDecorationLine: 'underline' }
+      }}
     >
       {title}
     </h1>
     <AuthorComp author={author} />
-      <p sx={{ fontSize: [2,3], display: ['block'] }}>{para}</p>
+    <p sx={{ fontSize: [2, 3], display: ['block'] }}>{para}</p>
   </Box>
 )
