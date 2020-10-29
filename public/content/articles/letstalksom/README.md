@@ -3,7 +3,7 @@ title: Let’s talk Summer Of Making
 para: We talk with Sam Poder about his experience with Summer Of Making.
 author: Harsh Bajpai
 date: 12-10-2020
-posterimgurl:https://cloud-oj1r1jgst.vercel.app/0poster.png
+posterimgurl: https://cloud-oj1r1jgst.vercel.app/0poster.png
 ---
 
 <br/>
