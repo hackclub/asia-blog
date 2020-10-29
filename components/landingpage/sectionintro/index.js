@@ -1,6 +1,6 @@
 /**@jsx jsx*/
 import { jsx, Flex, Text } from 'theme-ui'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ScrollingUtilityFunction from './utility/index'
 
 export default ({
@@ -15,10 +15,10 @@ export default ({
   const [isScrolled, setIsScrolled] = useState(false)
   const [isAtEnd, setIsAtEnd] = useState(false)
 
-  isScrolled != isScrolledfromParent
-    ? setIsScrolled(isScrolledfromParent)
-    : null
-  isAtEnd != isAtEndfromParent ? setIsAtEnd(isAtEndfromParent) : null
+  useEffect(() => {
+    setIsScrolled(isScrolledfromParent)
+    setIsAtEnd(isAtEndfromParent)
+  }, [isScrolledfromParent, isAtEndfromParent])
 
   const { scrollLeft, scrollRight } = ScrollingUtilityFunction(className)
 

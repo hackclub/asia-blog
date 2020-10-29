@@ -15,6 +15,7 @@ export default elementClassName => {
 
   const isScrolled = sliderElement =>
     sliderElement.scrollLeft != 0 ? true : false
+
   const isAtEndFlag = currentScroll =>
     currentScroll != 0 ? (currentScroll == prevScroll ? true : false) : false
 
