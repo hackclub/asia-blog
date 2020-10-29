@@ -67,6 +67,6 @@ This was our small conversation with Sam. There were a lot of interesting things
 If you want to see some of the projects that were made during the program, then check out this video.
 
 <div class='embed-container'>
-<iframe src='https://www.youtube.com/embed/D1_IiAXO3hE' frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen>
+<iframe src='https://www.youtube.com/embed/aRzoo11jABo' frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen>
 </iframe>
 </div>
