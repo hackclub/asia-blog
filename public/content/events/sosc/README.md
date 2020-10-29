@@ -1,5 +1,5 @@
 ---
-title: Organization first virtual hackathon by SOSC!
+title: Organizing first virtual hackathon by SOSC!
 para: Read this awesome blog to know about the first virtual hackathon by SOSC.
 author: Swasthik Shetty
 date: 11-10-2020
