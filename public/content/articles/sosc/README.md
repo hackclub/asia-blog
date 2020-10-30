@@ -81,4 +81,8 @@ Lead of Hack Club Sahyadri | GitHub Campus Expert | Microsoft student learn amba
 Rachitha Rai
 Lead of Hack Club Sahyadri | HR and Hospitality Lead of SOSC
 
-![Profiel Image ](https://avatars2.githubusercontent.com/u/44114164?s=400&u=dd755b8c9f8b955f2e03ab2440feedc770546748&v=4)
+![Profile Image ](https://avatars2.githubusercontent.com/u/44114164?s=400&u=dd755b8c9f8b955f2e03ab2440feedc770546748&v=4)
+
+Suhan Acharya | HR of SOSC
+
+![Profile Image](https://avatars3.githubusercontent.com/u/44167922?s=400&u=f3ead16e3648ea6fae3d90031850ed6e1f324f86&v=4)

@@ -30,7 +30,6 @@ const ContentElement = ({ text, bg }) => (
     href={
       text ? `/${_.pipe(_.replace('#', ''), _.trim, _.toLower)(text)}` : '#'
     }
-    target="blank"
     sx={{
       textDecoration: 'none',
       bg: bg ? bg : 'steel',
