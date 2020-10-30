@@ -52,7 +52,11 @@ export default ({
         <Text sx={{ fontSize: [2, 3], mt: [4] }}>{para}</Text>
       </Box>
       <Box sx={{ textAlign: 'center', mt: [3] }}>
-        <Button sx={{ borderRadius: [10], px: [4], py: [2], fontSize: [2] }}>
+        <Button
+          as="a"
+          href={url ? url : null}
+          sx={{ borderRadius: [10], px: [4], py: [2], fontSize: [2] }}
+        >
           READ!
         </Button>
       </Box>
