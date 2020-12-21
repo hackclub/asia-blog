@@ -13,7 +13,7 @@
     "push": "yarn run format && git push -u origin"
   },
   "dependencies": {
-    "@bajpai244/datetime": "^1.1.0",
+    "@bajpai244/datetime": "^1.1.1",
     "@emotion/styled": "^10.0.27",
     "@hackclub/icons": "^0.0.4",
     "@hackclub/markdown": "^0.0.1-alpha.0",

@@ -69,19 +69,17 @@ export default withResizeDetector(
           }}
         >
           {isHomePage ? (
-           <a href="../../../../" >
-            <img
-              
-              src="https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png"
-              sx={{
-                width: ['100px', '110px', '100px'], // ['100px', '110px', '120px'],
-                position: 'absolute',
-                ml: [2, 3, 2, 5],
-                bottom: [1],
+            <a href="../../../../">
+              <img
+                src="https://raw.githubusercontent.com/hackclub/india-site/master/public/hackclubflag.png"
+                sx={{
+                  width: ['100px', '110px', '100px'], // ['100px', '110px', '120px'],
+                  position: 'absolute',
+                  ml: [2, 3, 2, 5],
+                  bottom: [1]
                 }}
-             
-            />
-           </a> 
+              />
+            </a>
           ) : (
             <Button section={section} />
           )}
