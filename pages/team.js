@@ -27,25 +27,20 @@ export default () => (
       />
       <Card
         url={
-          'https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/auhtors/arun.jpg'
-        }
-        name="Arun Mani"
-        position="CTO at Hack Club APAC
-"
-      />
-      <Card
-        url={
-          'https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/auhtors/thejaswi.jpg'
-        }
-        name="Thejaswi Prakash"
-        position="Content & Social media at Hack Club APAC"
-      />
-      <Card
-        url={
           'https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/auhtors/harsh.png'
         }
         name="Harsh Bajpai"
-        position="Developer/Designer at Hack Club APAC"
+        position="Community/Tech at Hack Club APAC"
+      />
+      <Card
+        url={'./team/anna.jpeg'}
+        name="Anna Grace Benny"
+        position="Content & Social media at Hack Club APAC"
+      />
+      <Card
+        url={'./team/shubhangi.jpeg'}
+        name="Shubhangi Gupta"
+        position="Intern at Hack Club APAC"
       />
     </Grid>
     <Footer />
