@@ -3,7 +3,7 @@ title: Orpheus 🦕 leap board is here!!
 para: Yes, our favorite Prpheus leap boards are here, let the party begin!.
 author: Harsh Bajpai
 date: 11-6-2021
-posterimgurl: https://cloud-6dvkxlfi2-hack-club-bot.vercel.app/0vid-20210611-wa0253.gif
+posterimgurl: https://cloud-1bkbje58e-hack-club-bot.vercel.app/0image.png
 ---
 
 Hello Hack Clubbers, we are so happy to update you that we have received your long-time waited Orpheus leap boards!
