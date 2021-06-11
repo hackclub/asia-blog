@@ -31,7 +31,7 @@ export default ({
       <Box>
         <Customh1
           as="a"
-          href="#"
+          href={url}
           sx={{
             display: 'block',
             fontWeight: 'bold',
