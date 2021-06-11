@@ -25,7 +25,7 @@ export default () => (
     </div>
     <div sx={{ width: '100%', textAlign: 'center' }}>
       <h1 sx={{ color: 'white', fontSize: [3, 4] }}>
-        Meet our team which is working hard to make Hack Club-India possible!
+        Meet our team which is working hard to make Hack Club APAC possible!
       </h1>
     </div>
   </div>
