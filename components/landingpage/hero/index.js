@@ -37,7 +37,7 @@ export default () => (
         }}
       >
         Welcome To <br />
-        Hack Club India’s Blog
+        Hack Club Asia’s Blog
       </h1>
       <Card />
     </Box>
