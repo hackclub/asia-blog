@@ -1,6 +1,6 @@
 ---
 title: Orpheus 🦕 leap board is here!!
-para: Yes, our favorite Prpheus leap boards are here, let the party begin!.
+para: Yes, our favorite Orpheus leap boards are here, let the party begin!.
 author: Harsh Bajpai
 date: 11-6-2021
 posterimgurl: https://cloud-pe4iusipq-hack-club-bot.vercel.app/0vid-20210611-wa0253.gif
