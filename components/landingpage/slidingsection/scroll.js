@@ -24,7 +24,8 @@ export default ({ isVisible, className, setIsScrolled, setIsAtEnd }) => {
         height: '100%',
         zIndex: isVisible ? null : -1,
         transition: '0.4s',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        pointerEvents: 'none'
       }}
     >
       <Icon isVisible={isVisible} callback={callback} glyph="view-back" />
@@ -48,7 +49,7 @@ const Icon = ({ glyph, isVisible, callback }) => (
         glyph == 'view-back' ? '1.5px 0px 3px grey' : '-1.5px 0px 3px grey',
       cursor: 'pointer',
       transition: '0.3s',
-
+      pointerEvents: 'all',
       ':hover': {
         transform: 'scale(1.01)',
         transition: '0.2s'

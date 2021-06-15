@@ -6,7 +6,7 @@ import { ArrowLeft } from 'react-feather'
 export default ({ section }) => (
   <Flex
     as="a"
-    href="./"
+    href="../../"
     sx={{
       textDecorationLine: 'none',
       alignItems: 'center',
@@ -25,8 +25,6 @@ export default ({ section }) => (
     }}
   >
     <ArrowLeft sx={{ color: 'red' }} />
-    <Text sx={{ pl: [1], color: 'red' }}>
-      Back {section ? `to ${section}` : ''}
-    </Text>
+    <Text sx={{ pl: [1], color: 'red' }}>back {section ? `to home` : ''}</Text>
   </Flex>
 )
