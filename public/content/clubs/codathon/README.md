@@ -3,7 +3,7 @@ title: Codathon by Hack Club ITER!
 para: Learn about codathon, an event recently conducted by Hack Club ITER.
 author: Hack Club ITER
 date: 11-8-2021
-posterimgurl: https://cloud-2f0n251xr-hack-club-bot.vercel.app/0codathon-hero.png
+posterimgurl: https://cloud-qys68ft5y-hack-club-bot.vercel.app/00002-5736040580_20210811_123837_0000.png
 ---
 
 > “Experience is the name everyone gives to their mistakes.”
